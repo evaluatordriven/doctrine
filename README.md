@@ -24,7 +24,7 @@ would show the doctrine has failed, what supports it, and what would settle it. 
 
 The doctrine says which facts about a piece of work matter and why. The record that carries those facts
 is a separate, neutral specification: the Evaluator Driven custody record, `custody/v1`, in its own
-repository at <https://github.com/smoitozo/evaluatordriven>. The doctrine never redefines the record's
+repository at <https://github.com/evaluatordriven/custody>. The doctrine never redefines the record's
 terms, and the record does not depend on the doctrine.
 
 ## Licence
