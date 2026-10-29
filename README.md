@@ -20,10 +20,10 @@ record lets anyone who needs to audit the work check it.
 Version 0.1, ratified by its Owner on 2026-10-25. The evidence so far is narrow, and §8 says so: what
 would show the doctrine has failed, what supports it, and what would settle it. No outside adopter is known.
 
-Corpus lift, 2026-10-29. Not a new doctrine version. `DOCTRINE.md` now restates the private corpus through
-commit `e07ba13` (including proposals 0054 and 0055 on Architect design and readiness, seat boundaries,
-carry-forward packets, held-out material, and optional job-declared approvals), updating the earlier
-`a48a464` pin.
+Corpus lift, 2026-10-29. Not a new doctrine version. In addition to the `a48a464` baseline, `DOCTRINE.md`
+now restates proposals 0054 and 0055 from the private corpus at commit `e07ba13` (Contracts §4, §4.1 and
+§4.2, and Instrument rule 12: Architect design and readiness, seat boundaries, carry-forward packets,
+held-out material, and optional job-declared approvals).
 
 ## The custody record
 

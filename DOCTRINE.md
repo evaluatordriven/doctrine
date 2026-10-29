@@ -118,15 +118,15 @@ disclosed, with one exception that is never waived: **the Maker never judges its
 
 | Seat | Does | Never does |
 |---|---|---|
-| **Owner** | Owns the outcome. Ratifies the frame. Sets values, priority and risk appetite. Decides what the loop cannot. May override a verdict, recorded as a disposition beside it. | Rewrites a verdict. |
-| **Architect** | Defines done and good, writes the standard, sets the thresholds and bounds, and builds the instruments. Decides what gets built next, what the next round is handed, and whether the job is ready for the Maker. | Writes or tunes the standard after seeing a draft. Scores the work, or picks which version carries forward by preference. |
-| **Buyer** | Is the one whose problem is being solved. States the need and the constraints. | — |
-| **Specialist** | Supplies the standard of excellence for the craft. | — |
-| **Maker** | Produces the work and revises it against classified feedback. | Judges its own output, or produces the observation it is judged by. |
-| **Evaluator** | Alone scores the work against the frozen standard, through a channel the Maker did not produce, and returns a structured verdict. | Produces or repairs the work. |
-| **Orchestrator** | Runs the loop: assembles, delivers and checks the Maker's input, applies the pass rule, enforces the cap, escalates, and keeps the record. | Writes the work or scores it. Chooses what an iteration receives, or rules on readiness. |
+| **Owner** | Owns the outcome. Ratifies the frame. Sets values, priority and risk appetite. Decides what the loop cannot. May override a verdict, recorded as a disposition beside it. ⟨Playbook §6; Mandate X4⟩ | Rewrites a verdict. ⟨Mandate X4⟩ |
+| **Architect** | Defines done and good, writes the standard, sets the thresholds and bounds, and builds the instruments. Decides what gets built next, what the next round is handed, and whether the job is ready for the Maker. ⟨Contracts §4⟩ | Writes or tunes the standard after seeing a draft. Scores the work, or picks which version carries forward by preference. ⟨Contracts §4⟩ |
+| **Buyer** | Is the one whose problem is being solved. States the need and the constraints. ⟨Playbook §6; Primer, "The seats, named"⟩ | — |
+| **Specialist** | Supplies the standard of excellence for the craft. ⟨Playbook §6; Primer, "The seats, named"⟩ | — |
+| **Maker** | Produces the work and revises it against classified feedback. ⟨Playbook §6; Primer, "The seats, named"⟩ | Judges its own output, or produces the observation it is judged by. ⟨Playbook §6; Primer, "The seats, named"⟩ |
+| **Evaluator** | Alone scores the work against the frozen standard, through a channel the Maker did not produce, and returns a structured verdict. ⟨Contracts §4⟩ | Produces or repairs the work. ⟨Contracts §4⟩ |
+| **Orchestrator** | Runs the loop: assembles, delivers and checks the Maker's input, applies the pass rule, enforces the cap, escalates, and keeps the record. ⟨Contracts §4, §4.1⟩ | Writes the work or scores it. Chooses what an iteration receives, or rules on readiness. ⟨Contracts §4, §4.1⟩ |
 
-⟨Playbook §6; Primer, "The seats, named"; Mandate X4; Contracts §4⟩
+⟨Contracts §4, §4.1; Playbook §6 (Buyer, Specialist, Maker, Owner); Primer, "The seats, named"; Mandate X4⟩
 
 **The Architect designs; the Orchestrator routes; the Evaluator alone scores.** Three decisions belong to the Architect: what to build next, what goes into the next round's packet, and whether a job is ready to hand to the Maker. Readiness is a design check with three conditions: every required input file is pinned, the fixes are specified, and nothing requested contradicts the bar. Readiness is never a prediction that the draft will pass; predicting a pass is scoring, and scoring belongs only to the Evaluator. Which version carries forward is determined by the carry-forward rule (§4, rule 9) from the Evaluator's scores, never by the Architect's preference. The Orchestrator puts the packet together, delivers it, and verifies that what was delivered matches what was decided; it neither chooses the packet's contents nor rules on readiness, while retaining the pass rule, the cap, escalation, and the record. ⟨Contracts §4, §4.1; Instrument rule 12⟩
 
@@ -263,7 +263,7 @@ work contradicting itself: claims made but not implemented, and behaviour implem
 4. **Judge.** Evaluator(s) score or read each dimension, each score with its quoted observation, alongside
    their controls. The verdict is a structure, not prose: dimensions, violations (each classified, each
    quoting its evidence), and a recommendation of accept, regenerate, needs owner, or reject.
-5. **Decide the step.** Pass the rule: stop. Fall short: the next round receives four things—the best artifact produced so far, every known defect with its measurement, and every known workable solution with the measurement that establishes it, all filtered so held-out material is excluded.
+5. **Decide the step.** Pass the rule: stop. Fall short: the next round receives four things—(1) the best artifact produced so far, (2) every known defect with its measurement, (3) every known workable solution with the measurement that establishes it, and (4) the held-out exclusion applied across all of that input so held-out material never reaches the Maker.
 6. **Revise and repeat**, within the bounds, answering only what the Evaluator reported.
 
 ⟨Primer, "The evaluator's contract", "The run packet"; Example; Instrument rule 12; Contracts §4.2⟩
@@ -400,7 +400,7 @@ authority it has not earned. ⟨Mandate B.1.5⟩
 ## 10. Lineage
 
 **Origin.** The doctrine was first written down on 2026-08-31 as "Evaluator Driven Iteration": define
-quality first, build the evaluator before the generator, close the loop. ⟨Primer, references⟩ It grew into a corpus of seven weight-bearing documents: a quickstart, a playbook, an operating instrument, machine contracts, a mandate, a worked example and a guide for machines. A primer teaches it but is not weight-bearing. The Owner ratified each document and its later amendments. Version 0.1 was first ratified against that set at commit `a48a464` (2026-10-05) and now also restates the private-corpus amendments through `e07ba13` (2026-10-29), where proposals 0054 and 0055 are in force. The Primer was itself revised under the method: Evaluators from five model families, none of them the reviser, scoring against an instrument written before the revision existed. The corpus is private; these facts are the Owner's record of it. ⟨Playbook, load map; Primer, revision note v1.1; Contracts §4, §4.2; Instrument rule 12⟩
+quality first, build the evaluator before the generator, close the loop. ⟨Primer, references⟩ It grew into a corpus of seven weight-bearing documents: a quickstart, a playbook, an operating instrument, machine contracts, a mandate, a worked example and a guide for machines. A primer teaches it but is not weight-bearing. The Owner ratified each document and its later amendments. Version 0.1 was first ratified against that set at commit `a48a464` (2026-10-05) and now also restates proposals 0054 and 0055 from the private corpus at commit `e07ba13` (2026-10-29) (Contracts §4, §4.1 and §4.2, and Instrument rule 12). The Primer was itself revised under the method: Evaluators from five model families, none of them the reviser, scoring against an instrument written before the revision existed. The corpus is private; these facts are the Owner's record of it. ⟨Playbook, load map; Primer, revision note v1.1; Contracts §4, §4.2; Instrument rule 12⟩
 
 **This articulation.** Version 0.1 restates the corpus for readers who will never open it. It adds the
 lessons of the custody-record releases v0.9.4 to v0.9.6, marked ⟨practice⟩ above. Its rules: test Evaluators with planted cases in every batch; never average disagreements; check instruments against valid alternatives and pre-read them before use; keep evidence by hash, and write notes from output, not intent. Those
