@@ -416,7 +416,7 @@ answer the citation. Evaluation-driven development: a scorecard before optimizat
 than a pooled average. Teach-back from clinical practice: the person repeats the instruction in their own
 words, because "do you understand?" reliably gets a yes. ⟨Instrument, "What we stand on"; Primer, move 1⟩
 
-**Applied to itself.** This document had to pass the gate it describes. The Architect drafted it for the Owner's edit; a reader from another model family checked it for claims its evidence does not support; the Owner ratified it on 2026-10-25.
+**Applied to itself.** The 2026-10-25 text of Version 0.1 had to pass the gate it describes: the Architect drafted that initial v0.1 release (against commit `a48a464`) for the Owner's edit, a reader from another model family checked that 2026-10-25 release for claims its evidence did not support, and the Owner ratified that 2026-10-25 release on 2026-10-25. On 2026-10-29, a Maker revised §§3, 4, 5 and 10 to restate proposals 0054 and 0055 from commit `e07ba13` (Architect design and readiness, seat boundaries, carry-forward packets, held-out material, optional job-declared approvals, and the Evaluator-before-Maker sequence).
 
 ---
 
