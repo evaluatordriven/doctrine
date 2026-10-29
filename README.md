@@ -20,6 +20,10 @@ record lets anyone who needs to audit the work check it.
 Version 0.1, ratified by its Owner on 2026-10-25. The evidence so far is narrow, and §8 says so: what
 would show the doctrine has failed, what supports it, and what would settle it. No outside adopter is known.
 
+Pin correction, 2026-10-29. Not a new doctrine version. §10 no longer says the private corpus is held at
+`a48a464`. Version 0.1 still restates the corpus as of that commit. The private tip has moved. Those later
+amendments are not restated here.
+
 ## The custody record
 
 The doctrine says which facts about a piece of work matter and why. The record that carries those facts
