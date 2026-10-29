@@ -20,9 +20,10 @@ record lets anyone who needs to audit the work check it.
 Version 0.1, ratified by its Owner on 2026-10-25. The evidence so far is narrow, and §8 says so: what
 would show the doctrine has failed, what supports it, and what would settle it. No outside adopter is known.
 
-Pin correction, 2026-10-29. Not a new doctrine version. §10 no longer says the private corpus is held at
-`a48a464`. Version 0.1 still restates the corpus as of that commit. The private tip has moved. Those later
-amendments are not restated here.
+Corpus lift, 2026-10-29. Not a new doctrine version. `DOCTRINE.md` now restates the private corpus through
+commit `e07ba13` (including proposals 0054 and 0055 on Architect design and readiness, seat boundaries,
+carry-forward packets, held-out material, and optional job-declared approvals), updating the earlier
+`a48a464` pin.
 
 ## The custody record
 
