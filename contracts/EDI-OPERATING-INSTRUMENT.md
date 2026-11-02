@@ -2,7 +2,7 @@
 
 **Authority:** tier 4 in `../AUTHORITY.json` — outranked by tiers 0–3; conflicts follow its conflict rule.
 
-**Sheet** (print it, fill it) · **Verso** (the two entries and the rules) · *v1.12 — 2026-11-02 (Owner decision: A2 and I2 add the valid-alternative run and the independent pre-read, carrying DOCTRINE D6.2 and D6.3). v1.11 — 2026-11-02 (Owner decision: the Maker-family rule follows `../DOCTRINE.md` §3 — rule 2 and I14 amended; public derivative, Primer provenance removed). v1.10 — 2026-10-29 (0055 as amended: never held-out material on the Maker channel; per-act approval optional/job-declared). v1.9 — 2026-10-29 (0054: Architect decides what is built / what each iteration is given / readiness for the Maker; Evaluator judges; Orchestrator routes).
+**Sheet** (print it, fill it) · **Verso** (the two entries and the rules) · *v1.13 — 2026-11-02 (DOCTRINE v0.2.1: what the Maker is given follows rule 12 in the sheet's Feedback channel line, A4 and I4, which had kept "only" and "nothing else"). v1.12 — 2026-11-02 (Owner decision: A2 and I2 add the valid-alternative run and the independent pre-read, carrying DOCTRINE D6.2 and D6.3). v1.11 — 2026-11-02 (Owner decision: the Maker-family rule follows `../DOCTRINE.md` §3 — rule 2 and I14 amended; public derivative, Primer provenance removed). v1.10 — 2026-10-29 (0055 as amended: never held-out material on the Maker channel; per-act approval optional/job-declared). v1.9 — 2026-10-29 (0054: Architect decides what is built / what each iteration is given / readiness for the Maker; Evaluator judges; Orchestrator routes).
 **Instrument in force:** this instrument — **ratified by the Owner on 2026-09-22 and operable**; the **frame** is `EDI-MANDATE.md`, in force since 2026-09-20 (Contracts §1.7). One real handoff run has been made on it (the JEV skill job, Entry A, commissioned and accepted). A record states the version and hash it ran under; the rehearsal caveat no longer applies.
 
 ---
@@ -59,7 +59,7 @@ Use the same vocabulary as the full sheet; label the packet `instrument_profile:
 | **Ground truth** — one row per reference: source · version · hardness | `INVARIANT` / `DOCUMENT` / `PRIOR` |
 | **The instrument** — rubric and runner, written and frozen before it judges anything, and hashed | |
 | **Evaluator validated against** — the case it must fail | |
-| **Feedback channel** — the written, classified critique; the Maker's only input — never held-out material (Contracts §4.2) | |
+| **Feedback channel** — the written, classified critique, given to the Maker with rule 12's input (the best artifact, every known defect and every known workable solution, each with its measurement); never held-out material (Contracts §4.2) | |
 | **Bounds** — cap ___ (`generation 0` = the artifact as it stands) · cap counts ___ *(generations \| regenerations)* · budget ___ *(unit stated)* · cost of observation authorized ___ · `T_accept` ___ / `T_dim` ___ / `T_reject` ___ on scale ___ *(only where scoring is licensed: Entry A, and Entry B with a Specialist)* | |
 | **Human seat** — which verdicts escalate · **escalation route** — to whom · channel · by when | |
 | **Level** — at ___ *(one rung; the rung names who decides)* | L1 say · L2 report · L3 recommend · L4 decide · L5 act |
@@ -99,7 +99,7 @@ follows from it.*
   only here. It is the cheapest defect filter in the whole instrument, and it is unavailable in retrofit because
   the Maker has already acted.
 - **A4 — Generate and judge in the loop:** observe through a channel the Maker does not control, classify every
-  violation into one of rule 4's four locators (`artifact_missed_standard`, `standard_moved`, `dimension_unauthorized`, `frame_at_fault`). Do not grade it. Hand the Maker the classified critique and nothing else, revise or stop.
+  violation into one of rule 4's four locators (`artifact_missed_standard`, `standard_moved`, `dimension_unauthorized`, `frame_at_fault`). Do not grade it. Hand the Maker the classified critique with rule 12's input, never held-out material; revise or stop.
 - **A5 — Keep the instrument that accepted the work.** The artifact, its rubric, its ground-truth version and the
   **Evaluator identity** travel together, so a later reader can tell what standard a decision was made against.
 
@@ -252,7 +252,7 @@ derived from the prose above; **where the two disagree, the prose is the defect 
 | **I1** | A1 | Declare the frame first, in the sheet's order; nothing is generated until every must-ask is supplied. | manual (sheet) · packet `required[]` |
 | **I2** | A2 | Write the Evaluator, show it failing on a bad case and passing a valid alternative, have it pre-read against the bar by an adjudicator who did not write it, then freeze and hash the rubric. | manual · record `instrument_in_force` |
 | **I3** | A3 | The Maker says the win and the done-rule back, in their own words, before generating. | manual |
-| **I4** | A4 | Generate and judge in the loop; observe through a channel the Maker does not control; hand over classified critique only. | Contracts §2/§7 · manual |
+| **I4** | A4 | Generate and judge in the loop; observe through a channel the Maker does not control; hand over the classified critique with rule 12's input, never held-out material. | Contracts §2/§7 · manual |
 | **I5** | A5 | Keep the instrument that accepted the work — rubric, ground-truth version, Evaluator identity. | C30 · record fields |
 | **I6** | R1 | Collect the artifact's own standard and do not judge yet; report contradictions, do not resolve them. | manual |
 | **I7** | R2 | Declare the frame you would hold it to now, plus what is **frozen by circumstance**. | manual |
@@ -329,4 +329,4 @@ This table cites **up**, to the rules of `../DOCTRINE.md` it carries (doctrine I
 | `I21` | D4.14 | v0.1 tag |
 | `I22` | D4.5, D4.12, D6.1, D6.4 | v0.1 tag |
 | `I23` | D4.13 | v0.1 tag |
-| `I24` | D4.9 | v0.1 tag |
+| `I24` | D4.9, D5.step.5 | v0.1 tag; D5.step.5 added 2026-11-02 (v0.2.1) |

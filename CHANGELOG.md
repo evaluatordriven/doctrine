@@ -1,5 +1,64 @@
 # Changelog
 
+## 0.2.1 — 2026-11-02, candidate for the Owner's ratification
+
+**Fixes a defect in v0.2: the doctrine kept rules the contracts had already replaced, and the chain of
+command made the stale rule win.** Reported by the custody maintainers (VizH). The wording is VizH's lift
+(`doctrine-lift-C`, `86d09e8`), applied to v0.2 with its source tags and Primer citations removed, since
+v0.2 carries no tags and the Primer is kept out.
+
+- **§3 seats.** The Architect decides what gets built next, what the next round is handed, and whether a
+  job is ready to go to the Maker; it never scores, and never picks the version that carries forward by
+  preference. The Evaluator alone scores. The Orchestrator assembles, delivers and checks the Maker's input,
+  applies the pass rule, enforces the cap, escalates and keeps the record; it never chooses what an
+  iteration receives or rules on readiness. Was: "Runs the loop: dispatch, feedback, bounds, the record."
+  (Contracts §4, C37; proposal 0054.)
+- **§3, two new paragraphs with new ids.** `D3.routing` (the Architect designs, the Orchestrator routes,
+  the Evaluator alone scores; readiness is a design check, never a predicted pass) and `D3.held-out` (what
+  held-out material is, and that it never goes to the Maker). (Contracts §4, §4.2, C37, C39.)
+- **§4 principle 9.** The carry-forward test, not the Architect's preference, picks the version that goes
+  forward, and the next round is handed the best artifact, every known defect and every known workable
+  solution, each with its measurement, with held-out material filtered out. (Instrument rule 12.)
+- **§5 core sequence.** "Build the Evaluator, build the Maker" becomes "have the Evaluator in place before
+  the Maker produces". (Instrument A2.)
+- **§5 steps 5 and 6.** Was: "send the classified shortfall back to the Maker as constraints. Nothing else
+  goes back." Now the next round receives the best artifact, every known defect and every known workable
+  solution with their measurements, with the held-out exclusion applied to all of it. Revisions answer only
+  what the Evaluator reported. (Instrument rule 12; Contracts §4.2, C39; proposal 0055.)
+- **§5 "Where the human sits".** Per-act approval is not required by default; the kickoff frame, budget and
+  bounds suffice unless the job declares otherwise, and then it declares which form of approval counts. On
+  novel ground, "a person stays in every turn" becomes "a job may declare closer oversight". (Contracts
+  §4.2, C40; proposal 0055.)
+- **§3, a second never-waived exception (Owner, ratified 2026-11-02): whoever disposes of the work does
+  not judge it** (`D3.disposer-never-judges`). It follows from D5.disposition and matches custody/v1 CL1-6
+  ("the approver is not an evaluator"). The Owner may still hold the Maker's seat, disclosed.
+- **§10.** "This articulation" no longer describes only v0.1. "Applied to itself" records the failure:
+  v0.2's checkers verified that each rule was cited below the doctrine, not that the citing text agreed.
+- **Operating Instrument v1.12 → v1.13.** Three places still carried the old rule inside the Instrument,
+  against its own rule 12: the sheet's *Feedback channel* line ("the Maker's only input"), A4 ("the
+  classified critique and nothing else") and I4 ("classified critique only"). Each now gives the classified
+  critique with rule 12's input, never held-out material.
+- **Contracts v1.26.1 → v1.27.0.** §4's Owner row bars the Owner from the Evaluator's seat in a job it
+  disposes of, citing the new doctrine rule. It no longer bars the Maker's seat, which DOCTRINE §3 allows
+  when disclosed. The job-packet schema, `validate_job_packet`, `check_role_separation` and the fixtures
+  already enforce Owner ≠ Evaluator (proposal 0028 A) and are unchanged. The rule index is unchanged, since
+  the roles table is not extracted.
+- **README, smallest crew.** One person plus two model families (or a model and a script that person did
+  not write) can run a job; the one seat the person may not take is the Evaluator's.
+- **Contracts v1.26.0 → v1.26.1, editorial.** The §11 *Implements* table adds C39 and C40, and widens C37
+  and §4. §12 pins the Instrument at v1.13. The rule index is regenerated: still 86 rules, with unchanged
+  dispositions. The Instrument's I24 (rule 12) now also carries D5.step.5.
+- **`check_downhill.py` D10, wording.** For the rules that failed (the Orchestrator's and Architect's seats,
+  step 5, where the human sits), DOCTRINE.md and its carriers must state the same terms, and neither may
+  keep the replaced wording. Nine must-fail cases, including the seat-sharing rule and the Contracts' old Owner ban; run against v0.2's
+  DOCTRINE.md, D10 fails nine checks.
+  D8 now reads three-part doctrine versions.
+
+**Audit of every up-citation for agreement, not only existence.** Every rule and carrier was re-read. Apart
+from the items above, one disagreement was found: Contracts §4 barred the Owner from the Maker's and the
+Evaluator's seats, while DOCTRINE §3 allowed any disclosed sharing but one. The Owner resolved it with the
+second exception above.
+
 ## 0.2 — 2026-11-02, ratified by the Owner
 
 **Added `contracts/`: the machine contracts, published from the Owner's private working corpus.** An

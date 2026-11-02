@@ -1,6 +1,6 @@
 {
   "corpus": "E-DI",
-  "contracts_version": "1.26.0",
+  "contracts_version": "1.27.0",
   "generated_from": "EDI-MACHINE-CONTRACTS.md",
   "extracted_by": "extract_rules.py (v3 \u2014 reads this corpus, parses \u00a79's table)",
   "dispositions": {
@@ -15,7 +15,7 @@
     "none": 10,
     "uncovered": 0
   },
-  "generated_from_sha256": "4bbb34f0dce1a13e9edfcf500d2c7d490c76dd71b801027591f14e62c49a1870",
+  "generated_from_sha256": "70c40aca53f0c22eb22bc03513c2f4f30511177886135d611e8b596593ad82b9",
   "rules": [
     {
       "id": "R1",
@@ -610,7 +610,7 @@
       "section": "12",
       "disposition": "NONE",
       "via": "corpus self-description \u2014 the operating instrument's registration, authority rank and revision rule",
-      "text": "**The corpus has an operating instrument, and it is in force.** `EDI-OPERATING-INSTRUMENT.md` (v1.12) is tier 4 in `../AUTHORITY.json`: it **loses to this document** on roles, states, schemas, and the pass rule. Owner ratifies changes; version bumps regenerate derived artifacts in the same pass. It is retained hashed and named in the manifest (`instrument-v1.12`)."
+      "text": "**The corpus has an operating instrument, and it is in force.** `EDI-OPERATING-INSTRUMENT.md` (v1.13) is tier 4 in `../AUTHORITY.json`: it **loses to this document** on roles, states, schemas, and the pass rule. Owner ratifies changes; version bumps regenerate derived artifacts in the same pass. It is retained hashed and named in the manifest (`instrument-v1.13`)."
     },
     {
       "id": "R86",

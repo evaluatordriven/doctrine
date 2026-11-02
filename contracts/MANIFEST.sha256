@@ -1,16 +1,16 @@
 # E-DI contracts — MANIFEST.sha256
 # Computed from the bytes in this tree. Verify with:  python3 tools/build_manifest.py --verify
-# Contracts v1.26.0. A file whose hash differs from its recorded hash has been changed
+# Contracts v1.27.0. A file whose hash differs from its recorded hash has been changed
 # outside a version bump — which §12 requires to be regenerated in the same pass, not after it.
 
 9bdd60227ea6b8c854e321a7e9cf1a49c549b425e9c702cad02d9b187e1943ca     3279  EDI-EXAMPLE.md
 20f2e545375f047a4d5cf13b2da314458a9f1fe680aacef52aeb41d7f20c644a     7327  EDI-FOR-MACHINES.md
-4bbb34f0dce1a13e9edfcf500d2c7d490c76dd71b801027591f14e62c49a1870    78902  EDI-MACHINE-CONTRACTS.md
+70c40aca53f0c22eb22bc03513c2f4f30511177886135d611e8b596593ad82b9    79815  EDI-MACHINE-CONTRACTS.md
 7ab8786bd81f0da671df51120e097f4ca35a795e19f3871569ad120d9c6407c8    15860  EDI-MANDATE.md
-b4207553edb1843a0a64b693b7caa8d8ed52c3f41c21387bba409a3b0c208557    35064  EDI-OPERATING-INSTRUMENT.md
+5aa0a0bd324ddb52735dd38367e4f96c14f49360090930925778af0b581a5c95    35472  EDI-OPERATING-INSTRUMENT.md
 66f466645e48906c409c642c06731a4f4357568a401f1ded4b329129a6ab3c3d    15400  EDI-PLAYBOOK.md
 6c526419ff7cb3a252914bf8048b75e814785dac0c207d74973d43d7380ae278     3591  EDI-QUICKSTART.md
-24de24482c95f0b91e33649dbe509306e7a8b1a7a128101bd8981a9b7994ea93    22870  EDI-RULE-INDEX.json
+afaee16c9175d6a0d3f216950535f11632d5b9079b1685ad5435a41d7b5a8280    22870  EDI-RULE-INDEX.json
 99ce25f653e79e1339bdf90fbf83899f6dbda68edb61363af04b5a80361798ee     9806  EDI-TOOLS.md
 f0c65089d8d39402f560179b387b45ea39436adf41be90712d2075faabed5d9c     3406  README.md
 008f399fb3ed5c4ed57baaa65efa1e64cadaa0deda8c76264a9d073858838de5     5358  schemas/evaluator-record.schema.json

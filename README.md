@@ -10,7 +10,7 @@ record lets anyone who needs to audit the work check it.
 
 | Path | What it is | For |
 |---|---|---|
-| [`DOCTRINE.md`](DOCTRINE.md) | The doctrine, version 0.2: why, and the rules in plain words; each rule has a stable id (`D4.3`) | People |
+| [`DOCTRINE.md`](DOCTRINE.md) | The doctrine, version 0.2.1: why, and the rules in plain words; each rule has a stable id (`D4.3`) | People |
 | [`contracts/`](contracts/) | The machine contracts: the load set, schemas, fixtures, rule index and checkers an implementation is tested against | Implementations and their testers |
 | [`evidence/software-defect-pairs.md`](evidence/software-defect-pairs.md) | The same model, with and without the loop, on real software defects (cited in §8) | Anyone weighing the claims |
 | [`evidence/lingala-reading-2026-09-06.md`](evidence/lingala-reading-2026-09-06.md) | Two Lingala speakers' reading of a loop-built translation (cited in §8) | Anyone weighing the claims |
@@ -65,12 +65,16 @@ python3 tools/check_authority.py --selftest && python3 tools/check_downhill.py -
 
 ## Status
 
-Doctrine version 0.2, ratified by its Owner on 2026-11-02 (v0.1 ratified 2026-10-25). Contracts v1.26.0 and Operating Instrument
-v1.12, published 2026-11-02. The evidence so far is narrow, and §8 says so: what would show the doctrine
+Doctrine version 0.2.1, a candidate for the Owner's ratification (v0.2 ratified 2026-11-02; v0.1 ratified 2026-10-25). Contracts v1.27.0 and Operating Instrument
+v1.13, published 2026-11-02. The evidence so far is narrow, and §8 says so: what would show the doctrine
 has failed, what supports it, and what would settle it. No outside adopter is known.
 
 Facts that change as the work moves live here, not in `DOCTRINE.md`. As of 2026-11-02:
 
+- **The smallest crew.** One person can run a job: they hold the Owner, Architect, Buyer and Specialist
+  seats, disclosed, while a model makes the work and a model of another family, or a script that person did
+  not write, judges it. The one seat they may not take is the Evaluator's, since whoever disposes of the work
+  does not judge it (DOCTRINE §3).
 - **Qualifying the seats (DOCTRINE §6).** The Architect's seat is not yet tested on planted cases; that gap
   is open.
 

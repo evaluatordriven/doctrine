@@ -2,7 +2,7 @@
 
 **E-DI: Evaluator-Driven Iteration. A doctrine for delegating work so that quality survives.**
 
-Version 0.2 · ratified 2026-11-02 (v0.1 ratified 2026-10-25) · Steve Moitozo II · Licence: CC BY 4.0
+Version 0.2.1 · candidate 2026-11-02 (v0.2 ratified 2026-11-02; v0.1 ratified 2026-10-25) · Steve Moitozo II · Licence: CC BY 4.0
 
 ---
 
@@ -112,17 +112,22 @@ priorities, risk appetite and taste belong to the Owner.
 ## 3. The seats
 
 <a id="D3.maker-never-judges"></a>A seat is a responsibility, not a person. One person or model may hold several seats if that is
-disclosed, with one exception that is never waived: **the Maker never judges its own work.**
+disclosed, with two exceptions that are never waived: **the Maker never judges its own work**, and
+<a id="D3.disposer-never-judges"></a>**whoever disposes of the work does not judge it.**
 
 | Seat | Does | Never does |
 |---|---|---|
 | <a id="D3.Owner"></a>**Owner** | Owns the outcome. Ratifies the frame. Sets values, priority and risk appetite. Decides what the loop cannot. May override a verdict, recorded as a disposition beside it. | Rewrites a verdict. |
-| <a id="D3.Architect"></a>**Architect** | Defines done and good, writes the standard, sets the thresholds and bounds, and builds the instruments. | Writes or tunes the standard after seeing a draft. |
+| <a id="D3.Architect"></a>**Architect** | Defines done and good, writes the standard, sets the thresholds and bounds, and builds the instruments. Decides what gets built next, what the next round is handed, and whether a job is ready to go to the Maker. | Writes or tunes the standard after seeing a draft. Scores the work, or picks which version carries forward by preference. |
 | <a id="D3.Buyer"></a>**Buyer** | Is the one whose problem is being solved. States the need and the constraints. | — |
 | <a id="D3.Specialist"></a>**Specialist** | Supplies the standard of excellence for the craft. | — |
 | <a id="D3.Maker"></a>**Maker** | Produces the work and revises it against classified feedback. | Judges its own output, or produces the observation it is judged by. |
-| <a id="D3.Evaluator"></a>**Evaluator** | Judges the work against the frozen standard, through a channel the Maker did not produce, and returns a structured verdict. | Produces or repairs the work. |
-| <a id="D3.Orchestrator"></a>**Orchestrator** | Runs the loop: dispatch, feedback, bounds, the record. | Writes the work or scores it. |
+| <a id="D3.Evaluator"></a>**Evaluator** | Alone scores the work against the frozen standard, through a channel the Maker did not produce, and returns a structured verdict. | Produces or repairs the work. |
+| <a id="D3.Orchestrator"></a>**Orchestrator** | Runs the loop: assembles, delivers and checks the Maker's input, applies the pass rule, enforces the cap, escalates, and keeps the record. | Writes the work or scores it. Chooses what an iteration receives, or rules on readiness. |
+
+<a id="D3.routing"></a>**The Architect designs; the Orchestrator routes; the Evaluator alone scores.** Three decisions belong to the Architect: what to build next, what goes into the next round's packet, and whether a job is ready to hand to the Maker. Readiness is a design check with three conditions: every required input file is pinned, the fixes are specified, and nothing requested contradicts the bar. Readiness is never a prediction that the draft will pass; predicting a pass is scoring, and scoring belongs only to the Evaluator. Which version carries forward is determined by the carry-forward rule (§4, rule 9) from the Evaluator's scores, never by the Architect's preference. The Orchestrator puts the packet together, delivers it, and verifies that what was delivered matches what was decided; it neither chooses the packet's contents nor rules on readiness, while retaining the pass rule, the cap, escalation, and the record.
+
+<a id="D3.held-out"></a>**Held-out material.** Held-out material means only material the Maker cannot see: control and planted cases kept outside the Maker's reach, the expected answers on them, and the Evaluator's raw evidence from them. Something the Maker can already see is not held-out merely because the instrument also checks it; an expected value on a fixture in the Maker's own repository is not held-out. Held-out material never goes to the Maker from any seat.
 
 **An Evaluator seat is described by what it does and what holds it.** What it does:
 
@@ -187,7 +192,7 @@ an Evaluator seat biased toward the Maker's family. Two models from one family t
 
 9. <a id="D4.9"></a>**Inside a loop, a change answers only what the Evaluator reported.** Everything else waits for the next
    bar. Carry the best work forward: a revision replaces the incumbent only if it is better on at least one
-   dimension and worse on none. A trade between dimensions is the Owner's call, never the loop's.
+   dimension and worse on none. That mechanical test on the Evaluator's scores, never the Architect's preference, selects which version carries forward. When the loop continues, the next round is handed the best artifact produced so far, every known defect with its measurement, and every known workable solution with the measurement that establishes it, all filtered so held-out material never reaches the Maker. A trade between dimensions is the Owner's call, never the loop's.
 
 10. <a id="D4.10"></a>**Bound the loop, and name every exit.** A cap, a budget and a time limit are supplied, never defaulted,
     and bind while the run proceeds. Every path ends in a named state.
@@ -226,7 +231,7 @@ an Evaluator seat biased toward the Maker's family. Two models from one family t
 | <a id="D5.move.3"></a>**Evaluate independently** | Somebody who did not make the output checked it. |
 | <a id="D5.move.4"></a>**Keep the record** | My name is attached, and so is everything it rests on. |
 
-<a id="D5.core-sequence"></a>Behind them sits the core sequence: define quality and done, build the Evaluator, build the Maker, then run the loop. Every loop that works runs in that order. You cannot evaluate what you have not defined. And a
+<a id="D5.core-sequence"></a>Behind them sits the core sequence: define quality and done, have the Evaluator in place before the Maker produces, then run the loop. Every loop that works runs in that order. You cannot evaluate what you have not defined. And a
 definition written after seeing a draft is anchored on the draft.
 
 ### Two entries
@@ -250,9 +255,8 @@ work contradicting itself: claims made but not implemented, and behaviour implem
 4. <a id="D5.step.4"></a>**Judge.** Evaluator(s) score or read each dimension, each score with its quoted observation, alongside
    their controls. The verdict is a structure, not prose: dimensions, violations (each classified, each
    quoting its evidence), and a recommendation of accept, regenerate, needs owner, or reject.
-5. <a id="D5.step.5"></a>**Decide the step.** Pass the rule: stop. Fall short: send the classified shortfall back to the Maker
-   as constraints. Nothing else goes back.
-6. <a id="D5.step.6"></a>**Revise and repeat**, within the bounds.
+5. <a id="D5.step.5"></a>**Decide the step.** Pass the rule: stop. Fall short: the next round receives four things—(1) the best artifact produced so far, (2) every known defect with its measurement, (3) every known workable solution with the measurement that establishes it, and (4) the held-out exclusion applied across all of that input so held-out material never reaches the Maker.
+6. <a id="D5.step.6"></a>**Revise and repeat**, within the bounds, answering only what the Evaluator reported.
 
 ### The exits
 
@@ -277,9 +281,9 @@ one. The verdict stays as the loop produced it; the decision is written beside i
 
 ### Where the human sits
 
-<a id="D5.human"></a>On well-trodden ground, where an Evaluator has a validation record and calibrated thresholds, the loop
-runs without a person and exceptions surface as *needs owner*. On novel ground (a new domain, new stakes, a
-first run), a person stays in every turn until the proxy earns trust. The mistake is not keeping a human too
+<a id="D5.human"></a>Per-act approval is not required by default: ratifying the frame, the budget and the bounds at kickoff is enough for the Orchestrator to dispatch within them unless the job declares that specific acts need a separate human yes. When a job does declare per-act approval, it also declares which form counts: a standing grant recorded in the Owner's or Orchestrator's channel, a direct yes in the acting seat's own channel, or a relayed yes where the job's declared form permits relay and the record labels it as relayed. Any form the job did not declare authorizes nothing, and repeated requests for the same kind of approval remain a failure signal (§4 rule 11, §8 F5). On well-trodden ground, where an Evaluator has a validation record and calibrated thresholds, the loop
+runs within its kickoff bounds without per-turn intervention and exceptions surface as *needs owner*. On novel ground (a new domain, new stakes, a
+first run), a job may declare closer oversight until the proxy earns trust. The mistake is not keeping a human too
 long; it is removing one before the proxy has proved itself. This is human-at-the-helm, not just human-in-the-loop: the person sets the bar before the work begins, keeps the decisions only they can make, and decides when the loop has earned the right to run without them.
 
 ---
@@ -387,10 +391,10 @@ documents: a quickstart, a playbook, an operating instrument, machine contracts,
 and a guide for machines. The Owner ratified each document and its later amendments. They are published in
 `contracts/`, below this doctrine in the chain of command (`AUTHORITY.json`).
 
-**This articulation.** Version 0.1 restates the corpus for readers who will never open it. It adds the
+**This articulation.** The doctrine restates the contracts for readers who will never open them. Version 0.1 added the
 lessons of the custody-record releases v0.9.4 to v0.9.6. Its rules: test Evaluators with planted cases in every batch; never average disagreements; check instruments against valid alternatives and pre-read them before use; keep evidence by hash, and write notes from output, not intent. Those
-releases were themselves run under this doctrine, and their records are public: https://github.com/evaluatordriven/custody, tags v0.9.4 to v0.9.6. One rule departs from the
-corpus on purpose. The corpus barred the Maker's family from the Evaluator seat outright. This version adopts the custody record's principle: the seat must not be biased toward the Maker's family (§3). The record's rule, CL2-3, also requires a different endpoint.
+releases were themselves run under this doctrine, and their records are public: https://github.com/evaluatordriven/custody, tags v0.9.4 to v0.9.6. One rule departed from the
+corpus on purpose. The corpus barred the Maker's family from the Evaluator seat outright. Version 0.1 adopted the custody record's principle: the seat must not be biased toward the Maker's family (§3). Since v0.2 the contracts follow it. The record's rule, CL2-3, also requires a different endpoint.
 
 **What it stands on.** Covey's stewardship delegation (desired results, guidelines, resources,
 accountability, consequences). Hyatt's five levels of delegation. The writer–reviewer split in agent
@@ -401,9 +405,9 @@ answer the citation. Evaluation-driven development: a scorecard before optimizat
 than a pooled average. Teach-back from clinical practice: the person repeats the instruction in their own
 words, because "do you understand?" reliably gets a yes.
 
-**Applied to itself.** This document had to pass the gate it describes. The Architect drafted v0.1 for the Owner's edit; a reader from another model family checked it for claims its evidence does not support; the Owner ratified it on 2026-10-25. The Architect drafted v0.2; this repository's checkers verified that every rule is carried below it and that its text is v0.1 word for word apart from the recorded changes; the Owner ratified it on 2026-11-02. Version 0.2 has not had a reader from another model family.
+**Applied to itself.** This document had to pass the gate it describes. The Architect drafted v0.1 for the Owner's edit; a reader from another model family checked it for claims its evidence does not support; the Owner ratified it on 2026-10-25. The Architect drafted v0.2; this repository's checkers verified that every rule is cited below it and that its text is v0.1 word for word apart from the recorded changes; the Owner ratified it on 2026-11-02. A citation is not agreement: v0.2 kept rules the contracts had already replaced, on the Orchestrator's seat and on what the next round is given. Version 0.2.1 takes the contracts' rules in the custody maintainers' wording, and its checkers now compare the wording of those rules, not only the citation. Neither version has had a reader from another model family.
 
 ---
 
-*Evaluator Driven, v0.2. © 2026 Steve Moitozo II. Licensed under CC BY 4.0.
+*Evaluator Driven, v0.2.1. © 2026 Steve Moitozo II. Licensed under CC BY 4.0.
 evaluatordriven.com*

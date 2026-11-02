@@ -5,7 +5,7 @@
 **Status:** normative. **This is the file an agent must obey.**
 **Audience:** agent implementing or operating an E-DI loop.
 **Object:** machine specification of E-DI (roles, states, schemas, pass rule).
-**Version:** 1.26.0 — 2026-11-02 (Owner decision: §4's Evaluator row names the reader form and the seat's holders, a person, a model or a script, carrying DOCTRINE D3.reader and D3.holder; roles table, no rule-index change. v1.25.0 — 2026-11-02: Owner decision: §4 names the adjudicator and the test author as forms of the Evaluator seat, carrying DOCTRINE D3.adjudicator and D3.test-author; no rule-index change, the roles table is not extracted. v1.24.1 — 2026-11-02: public derivative: editorial only — Primer attributions removed, the authority chain of `../AUTHORITY.json` and custody/v1 precedence stated in §0, §10 retitled; no NORMATIVE rule added, removed or reworded. v1.24.0 — 2026-10-29: 0055 as amended: seat-to-seat communication; held-out never reaches the Maker; per-act approval optional and job-declared; C38–C40 appended).
+**Version:** 1.27.0 — 2026-11-02 (Owner decision, DOCTRINE v0.2.1 D3.disposer-never-judges: §4's Owner row bars the Owner from the Evaluator's seat in a job it disposes of, and no longer from the Maker's seat, which DOCTRINE §3 allows when disclosed; no rule-index change, the roles table is not extracted). 1.26.1 — 2026-11-02 (DOCTRINE v0.2.1, editorial: §11 Implements gains C39 (D3.held-out, D5.step.5) and C40 (D5.human), widens C37 to D3.Orchestrator, D3.routing and D5.step.5, and §4 to D3.routing; §12 pins the Operating Instrument v1.13; no NORMATIVE rule changes meaning). 1.26.0 — 2026-11-02 (Owner decision: §4's Evaluator row names the reader form and the seat's holders, a person, a model or a script, carrying DOCTRINE D3.reader and D3.holder; roles table, no rule-index change. v1.25.0 — 2026-11-02: Owner decision: §4 names the adjudicator and the test author as forms of the Evaluator seat, carrying DOCTRINE D3.adjudicator and D3.test-author; no rule-index change, the roles table is not extracted. v1.24.1 — 2026-11-02: public derivative: editorial only — Primer attributions removed, the authority chain of `../AUTHORITY.json` and custody/v1 precedence stated in §0, §10 retitled; no NORMATIVE rule added, removed or reworded. v1.24.0 — 2026-10-29: 0055 as amended: seat-to-seat communication; held-out never reaches the Maker; per-act approval optional and job-declared; C38–C40 appended).
 **Owner ratification:** **2026-09-24** — the Owner ratified this short front as the weight-bearing Machine Contracts (NORMATIVE law unchanged from v1.12; compression + seat Title Case + §0/§12 cleanup only).
 **Scope:** roles as binding behaviour, states, schemas, the pass rule. Missing fact → **ask**, never invent.
 
@@ -248,7 +248,7 @@ an influence channel (paraphrase, a promptable re-generation pass, or human) or 
 
 | Role | May do | Must never do |
 |------|--------|---------------|
-| **Owner** | Own the outcome; ratify the frame; set the values, the priority and the risk appetite; authorize the dimension set; declare a trade; dispose of a rejected artifact | Author the standard; score the work; hold the Maker's or the Evaluator's seat in the same job |
+| **Owner** | Own the outcome; ratify the frame; set the values, the priority and the risk appetite; authorize the dimension set; declare a trade; dispose of a rejected artifact | Author the standard; score the work; hold the Evaluator's seat in a job it disposes of (`../DOCTRINE.md` D3.disposer-never-judges) |
 | **Architect** | Define *done* and *good*; author the standard; set the thresholds; write the frame instrument (§1.7); **decide what is built next, what each iteration is given and whether the job is ready to hand to the Maker — a design decision, never a score (§4 below)** | Score the work; produce the artifact; ratify the frame it authored — **the Owner ratifies** |
 | **Evaluator** | Score against ground truth; emit the schema in §5; classify violations; recommend a verdict; read each dimension through a channel the Maker did not produce. The seat is held by a person, a model or a script, recorded with the job; whichever holds it reads the batch's controls | Generate or edit the artifact; widen its own authority beyond §3 |
 | **Maker** | Produce and revise the artifact from the job, the standard, and the last verdict | Score its own output; declare itself accepted; change the standard |
@@ -698,7 +698,7 @@ disposition, and the disposition is published with the corpus in `EDI-RULE-INDEX
 **A NORMATIVE rule with no disposition is a defect in this corpus**, reported as a defect rather
 than absorbed. A version that does not publish its dispositions has not run the invariant.
 
-**State at v1.26.0.** Of **86 in-scope NORMATIVE rules**:
+**State at v1.27.0.** Of **86 in-scope NORMATIVE rules**:
 **74 are `LINE`**, **2 are `SCHEMA`**, **10 are `NONE`**,
 and **0 remain uncovered**.
 
@@ -896,7 +896,9 @@ This table cites **up**, to the rules of `../DOCTRINE.md` it carries (doctrine I
 | `C30` | D4.12, D6.4 | added 2026-11-02 |
 | `C31` | D5.outcome.no-artifact | added 2026-11-02 |
 | `C32` | D5.entry.B | added 2026-11-02 |
-| `C37` | D3.Architect | added 2026-11-02 |
+| `C37` | D3.Architect, D3.Orchestrator, D3.routing, D5.step.5 | added 2026-11-02; D3.Orchestrator, D3.routing and D5.step.5 added 2026-11-02 (v0.2.1) |
+| `C39` | D3.held-out, D5.step.5 | added 2026-11-02 (v0.2.1) |
+| `C40` | D5.human | added 2026-11-02 (v0.2.1) |
 | `§0` | D7.custody | added 2026-11-02 |
 | `§1` | D4.1, D5.core-sequence | added 2026-11-02 |
 | `§1.1` | D2.bar, D3.Buyer, D3.Specialist | added 2026-11-02 |
@@ -905,7 +907,7 @@ This table cites **up**, to the rules of `../DOCTRINE.md` it carries (doctrine I
 | `§1.6` | D4.4 | added 2026-11-02 |
 | `§2` | D5.step.2, D5.step.6 | added 2026-11-02 |
 | `§3` | D4.6, D5.step.5 | mixed: D4.6 tag, D5.step.5 added |
-| `§4` | D3.maker-never-judges, D3.Owner, D3.Architect, D3.Maker, D3.Evaluator, D3.Orchestrator, D3.adjudicator, D3.test-author, D3.reader, D3.holder | added 2026-11-02 |
+| `§4` | D3.maker-never-judges, D3.disposer-never-judges, D3.Owner, D3.Architect, D3.Maker, D3.Evaluator, D3.Orchestrator, D3.adjudicator, D3.test-author, D3.reader, D3.holder, D3.routing | added 2026-11-02; D3.routing added 2026-11-02 (v0.2.1) |
 | `§5` | D4.7, D5.step.4 | mixed: D4.7 tag, D5.step.4 added |
 | `§6` | D3.Orchestrator | added 2026-11-02 |
 | `§7.1` | D5.move.3 | added 2026-11-02 |
@@ -926,7 +928,7 @@ Agents propose; Owner ratifies; version bump regenerates derived artifacts; supe
 
 **The corpus has a mandate (§1.7).** `EDI-MANDATE.md` is the Owner’s frame for what this corpus must and must not do (closes the recursion). **Ratified and in force** (2026-09-20; short front Owner-ratified 2026-09-24). While a mandate is unratified, no dimension scoring a corpus against its purpose may be `pass` — that control does not apply here while ratification holds.
 
-**The corpus has an operating instrument, and it is in force.** `EDI-OPERATING-INSTRUMENT.md` (v1.12) is tier 4 in `../AUTHORITY.json`: it **loses to this document** on roles, states, schemas, and the pass rule. Owner ratifies changes; version bumps regenerate derived artifacts in the same pass. It is retained hashed and named in the manifest (`instrument-v1.12`).
+**The corpus has an operating instrument, and it is in force.** `EDI-OPERATING-INSTRUMENT.md` (v1.13) is tier 4 in `../AUTHORITY.json`: it **loses to this document** on roles, states, schemas, and the pass rule. Owner ratifies changes; version bumps regenerate derived artifacts in the same pass. It is retained hashed and named in the manifest (`instrument-v1.13`).
 
 ### 12.1 Entry B baseline (NORMATIVE)
 

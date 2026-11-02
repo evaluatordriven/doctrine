@@ -19,6 +19,10 @@ Checks:
       the tiers above, and goes to the Owner if none answers it
   D8  versions: the README's version claims match the files' own headers
   D9  links: relative links in the README, the contracts README and the CHANGELOG resolve
+  D10 wording: for rules whose words carry the rule (the seats' boundaries, what the next iteration is
+      given), DOCTRINE.md and the lower files that carry them state the same terms, and DOCTRINE.md
+      keeps none of the wording the lower files replaced. A D6 citation shows a rule is carried; D10
+      shows the carrier agrees.
 Standard library only. A pass means the mechanical checks agree; agreement in meaning that no program can
 see is the implementing agent's job under the conflict rule.
 """
@@ -205,8 +209,8 @@ def check(root: Path, strict: bool = False) -> int:
         rep.ok("D8 the README's Instrument version is the Instrument's header", m.group(2) == iv.group(1),
                f"README v{m.group(2)} vs header v{iv.group(1)}")
 
-    dm = re.search(r"Doctrine version (\d+\.\d+)", readme)
-    dv = re.search(r"^Version (\d+\.\d+)", doc, re.M)
+    dm = re.search(r"Doctrine version (\d+\.\d+(?:\.\d+)?)\b", readme)
+    dv = re.search(r"^Version (\d+\.\d+(?:\.\d+)?)\b", doc, re.M)
     rep.ok("D8 the README's doctrine version is DOCTRINE.md's", bool(dm and dv) and dm.group(1) == dv.group(1),
            f"README {dm.group(1) if dm else None} vs DOCTRINE.md {dv.group(1) if dv else None}")
 
@@ -219,7 +223,69 @@ def check(root: Path, strict: bool = False) -> int:
             if not ((root / f).parent / link).exists():
                 broken.append(f"{f} -> {link}")
     rep.ok("D9 every relative link resolves", not broken, f"broken: {broken}")
+
+    print("\n=== D10 wording: the carriers agree with the doctrine, not only cite it ===")
+    texts = {DOC: doc, PB: pb, MD: md, CT: ct, IN: ins}
+    for did, where, must, never, carriers in AGREE:
+        blk = _block(texts[DOC], where)
+        t = norm(blk).lower() if blk else ""
+        rep.ok(f"D10 {did}: DOCTRINE.md states the terms", bool(blk) and all(k in t for k in must),
+               f"missing in DOCTRINE.md: {[k for k in must if k not in t] if blk else where}")
+        rep.ok(f"D10 {did}: DOCTRINE.md keeps none of the replaced wording", not any(k in t for k in never),
+               f"stale wording in DOCTRINE.md: {[k for k in never if k in t]}")
+        for f, cwhere, ckeys, *cnever in carriers:
+            cb = _block(texts[f], cwhere)
+            ct_ = norm(cb).lower() if cb else ""
+            if ckeys:
+                defect(rep, f"D10 {did}: {f} {cwhere[1]} carries the same terms", bool(cb) and all(k in ct_ for k in ckeys),
+                       f, DOC, f"missing: {[k for k in ckeys if k not in ct_] if cb else 'block not found'}")
+            for nv in cnever:
+                defect(rep, f"D10 {did}: {f} {cwhere[1]} keeps none of the replaced wording", not any(k in ct_ for k in nv),
+                       f, DOC, f"stale wording: {[k for k in nv if k in ct_]}")
     return rep.done()
+
+
+def _block(text: str, where):
+    """where = (regex, label): the first match of a multi-line regex, or None."""
+    m = re.search(where[0], text, re.S | re.M)
+    return m.group(0) if m else None
+
+
+# D10: (doctrine id, where in DOCTRINE.md, terms it must state, replaced wording it must not keep,
+#       [(lower file, where, terms the carrier must state)]). Terms are lower-case, compared after norm().
+_ROW = lambda seat: (rf"^\| (?:<a id=\"[^\"]+\"></a>)?\*\*{seat}\*\* \|[^\n]+$", f"the {seat} row")
+AGREE = [
+    ("D3.Orchestrator", _ROW("Orchestrator"),
+     ["assembles, delivers and checks the maker's input", "writes the work or scores it. chooses what an iteration receives"],
+     ["dispatch, feedback"],
+     [(CT, _ROW("Orchestrator"), ["decide what an iteration is given", "assembles, delivers and verifies"]),
+      (CT, (r"^\*\*NORMATIVE — the Orchestrator routes; the Architect designs\.\*\*.+?(?=^\*\*Definition)",
+            "§4 'the Orchestrator routes'"), ["assembles that input, delivers it, verifies"])]),
+    ("D3.Architect", _ROW("Architect"),
+     ["what the next round is handed", "after seeing a draft. scores the work"],
+     [],
+     [(CT, _ROW("Architect"), ["what each iteration is given", "score the work"])]),
+    ("D5.step.5", (r"^5\. \*\*Decide the step\.\*\*.+?(?=^6\. )", "§5 step 5"),
+     ["best artifact produced so far", "every known defect with its measurement", "every known workable solution",
+      "held-out material never reaches the maker"],
+     ["nothing else goes back", "classified shortfall back to the maker as constraints"],
+     [(IN, (r"^12\. \*\*Carry the best parts forward\.\*\*[^\n]+$", "rule 12"),
+       ["best artifact the job has produced", "every known defect and its measurement",
+        "every known workable solution"]),
+      (CT, (r"^\| \*\*C39\*\* \|[^\n]+$", "C39"),
+       ["every known defect and its measurement", "no maker message contains held-out material"]),
+      (IN, (r"\A.+\Z", "(whole file)"), [],
+       ["the maker's only input", "classified critique and nothing else", "classified critique only"])]),
+    ("D3.disposer-never-judges", (r"^A seat is a responsibility, not a person\..+?(?=^\| Seat)", "§3 seat-sharing rule"),
+     ["two exceptions that are never waived", "whoever disposes of the work does not judge it"],
+     ["with one exception that is never waived"],
+     [(CT, _ROW("Owner"), ["hold the evaluator's seat in a job it disposes of"], ["hold the maker's or the evaluator's seat"])]),
+    ("D5.human", (r"^### Where the human sits\n.+?(?=^---)", "Where the human sits"),
+     ["per-act approval is not required by default", "any form the job did not declare authorizes nothing"],
+     ["a person stays in every turn"],
+     [(CT, (r"^\| \*\*C40\*\* \|[^\n]+$", "C40"),
+       ["jobs that declare no per-act approval need none beyond kickoff", "a form the job did not declare authorizes nothing"])]),
+]
 
 
 # ----------------------------------------------------------------------------- self-test
@@ -292,10 +358,40 @@ CASES = [
      _edit(PB, "(Mandate **P2**;", "(Mandate **M1.1–M1.2**; Mandate **P2**;"), False, 1, "D7 Mandate id M1.2"),
     ("a stale version claim in the README fails D8", _stale_version, False, 1, "D8 the README's Contracts version"),
     ("a stale doctrine version in the README fails D8",
-     _edit("README.md", "Doctrine version 0.2", "Doctrine version 0.1"), False, 1, "D8 the README's doctrine version"),
+     _edit("README.md", "Doctrine version 0.2.1", "Doctrine version 0.2"), False, 1, "D8 the README's doctrine version"),
     ("a broken relative link fails D9",
      _edit("README.md", "[`CHANGELOG.md`](CHANGELOG.md)", "[`CHANGELOG.md`](CHANGES.md)"), False, 1, "D9 every relative link"),
     ("--strict fails while a declared gap is open", _open_gap, True, 1, "D6 --strict"),
+    ("v0.2's Orchestrator row restored in DOCTRINE.md fails D10",
+     _edit(DOC, "Runs the loop: assembles, delivers and checks the Maker's input, applies the pass rule, enforces the cap, escalates, and keeps the record. | Writes the work or scores it. Chooses what an iteration receives, or rules on readiness. |",
+           "Runs the loop: dispatch, feedback, bounds, the record. | Writes the work or scores it. |"),
+     False, 1, "D10 D3.Orchestrator: DOCTRINE.md states the terms"),
+    ("v0.2's step 5 restored in DOCTRINE.md fails D10 on the replaced wording",
+     _edit(DOC, "so held-out material never reaches the Maker.\n6.", "so held-out material never reaches the Maker. Nothing else goes back.\n6."),
+     False, 1, "D10 D5.step.5: DOCTRINE.md keeps none of the replaced wording"),
+    ("the Architect's 'what the next round is handed' dropped from DOCTRINE.md fails D10",
+     _edit(DOC, " Decides what gets built next, what the next round is handed, and whether a job is ready to go to the Maker.", ""),
+     False, 1, "D10 D3.Architect: DOCTRINE.md states the terms"),
+    ("Instrument rule 12 dropping 'every known defect' is a defect in the Instrument (D10)",
+     _edit(IN, "together with **every known defect and its measurement**", "together with **the shortfall**"),
+     False, 1, "D10 D5.step.5: contracts/EDI-OPERATING-INSTRUMENT.md rule 12"),
+    ("the Contracts' Orchestrator row allowed to decide the input is a defect in the Contracts (D10)",
+     _edit(CT, "**decide what an iteration is given or whether the job is ready for the Maker", "**decide whether the job is ready for the Maker"),
+     False, 1, "D10 D3.Orchestrator: contracts/EDI-MACHINE-CONTRACTS.md the Orchestrator row"),
+    ("the disposer-never-judges rule dropped from DOCTRINE.md fails D10",
+     _edit(DOC, "two exceptions that are never waived: **the Maker never judges its own work**, and\n<a id=\"D3.disposer-never-judges\"></a>**whoever disposes of the work does not judge it.**",
+           "one exception that is never waived: **the Maker never judges its own work.** <a id=\"D3.disposer-never-judges\"></a>"),
+     False, 1, "D10 D3.disposer-never-judges: DOCTRINE.md states the terms"),
+    ("the Contracts' old Owner ban restored is a defect in the Contracts (D10)",
+     _edit(CT, "hold the Evaluator's seat in a job it disposes of", "hold the Maker's or the Evaluator's seat in the same job"),
+     False, 1, "D10 D3.disposer-never-judges: contracts/EDI-MACHINE-CONTRACTS.md the Owner row"),
+    ("v0.2's 'a person stays in every turn' restored in DOCTRINE.md fails D10",
+     _edit(DOC, "a job may declare closer oversight until the proxy earns trust", "a person stays in every turn until the proxy earns trust"),
+     False, 1, "D10 D5.human: DOCTRINE.md keeps none of the replaced wording"),
+    ("the Instrument's A4 restored to 'the classified critique and nothing else' is a defect in the Instrument (D10)",
+     _edit(IN, "Hand the Maker the classified critique with rule 12's input, never held-out material; revise or stop.",
+           "Hand the Maker the classified critique and nothing else, revise or stop."),
+     False, 1, "D10 D5.step.5: contracts/EDI-OPERATING-INSTRUMENT.md (whole file) keeps none of the replaced wording"),
 ]
 
 
