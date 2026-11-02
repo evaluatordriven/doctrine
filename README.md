@@ -65,7 +65,7 @@ python3 tools/check_authority.py --selftest && python3 tools/check_downhill.py -
 
 ## Status
 
-Doctrine version 0.2.1, a candidate for the Owner's ratification (v0.2 ratified 2026-11-02; v0.1 ratified 2026-10-25). Contracts v1.27.0 and Operating Instrument
+Doctrine version 0.2.1, ratified by its Owner on 2026-11-02 (v0.2 ratified 2026-11-02; v0.1 ratified 2026-10-25). Contracts v1.27.0 and Operating Instrument
 v1.13, published 2026-11-02. The evidence so far is narrow, and §8 says so: what would show the doctrine
 has failed, what supports it, and what would settle it. No outside adopter is known.
 

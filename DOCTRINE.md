@@ -2,7 +2,7 @@
 
 **E-DI: Evaluator-Driven Iteration. A doctrine for delegating work so that quality survives.**
 
-Version 0.2.1 · candidate 2026-11-02 (v0.2 ratified 2026-11-02; v0.1 ratified 2026-10-25) · Steve Moitozo II · Licence: CC BY 4.0
+Version 0.2.1 · ratified 2026-11-02 (v0.2 ratified 2026-11-02; v0.1 ratified 2026-10-25) · Steve Moitozo II · Licence: CC BY 4.0
 
 ---
 
@@ -405,7 +405,7 @@ answer the citation. Evaluation-driven development: a scorecard before optimizat
 than a pooled average. Teach-back from clinical practice: the person repeats the instruction in their own
 words, because "do you understand?" reliably gets a yes.
 
-**Applied to itself.** This document had to pass the gate it describes. The Architect drafted v0.1 for the Owner's edit; a reader from another model family checked it for claims its evidence does not support; the Owner ratified it on 2026-10-25. The Architect drafted v0.2; this repository's checkers verified that every rule is cited below it and that its text is v0.1 word for word apart from the recorded changes; the Owner ratified it on 2026-11-02. A citation is not agreement: v0.2 kept rules the contracts had already replaced, on the Orchestrator's seat and on what the next round is given. Version 0.2.1 takes the contracts' rules in the custody maintainers' wording, and its checkers now compare the wording of those rules, not only the citation. Neither version has had a reader from another model family.
+**Applied to itself.** This document had to pass the gate it describes. The Architect drafted v0.1 for the Owner's edit; a reader from another model family checked it for claims its evidence does not support; the Owner ratified it on 2026-10-25. The Architect drafted v0.2; this repository's checkers verified that every rule is cited below it and that its text is v0.1 word for word apart from the recorded changes; the Owner ratified it on 2026-11-02. A citation is not agreement: v0.2 kept rules the contracts had already replaced, on the Orchestrator's seat and on what the next round is given. Version 0.2.1 takes the contracts' rules in the custody maintainers' wording, and its checkers now compare the wording of those rules, not only the citation; the Owner ratified it on 2026-11-02. Neither version has had a reader from another model family.
 
 ---
 

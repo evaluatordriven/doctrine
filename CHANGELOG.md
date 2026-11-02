@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.1 — 2026-11-02, candidate for the Owner's ratification
+## 0.2.1 — 2026-11-02, ratified by the Owner
 
 **Fixes a defect in v0.2: the doctrine kept rules the contracts had already replaced, and the chain of
 command made the stale rule win.** Reported by the custody maintainers (VizH). The wording is VizH's lift
