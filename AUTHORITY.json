@@ -1,0 +1,130 @@
+{
+  "$comment": "The chain of command for this repository. Ratified by the Owner 2026-11-02. CI reads this file (tools/check_authority.py, tools/check_downhill.py); agents read it before acting on a conflict. Lower tier number = higher authority.",
+  "version": "1.0.0",
+  "ratified": "2026-11-02",
+  "tiers": [
+    {
+      "tier": 0,
+      "holder": "The Owner",
+      "kind": "person",
+      "owns": [
+        "ratifying and amending every file",
+        "deciding conflicts no higher tier resolves"
+      ]
+    },
+    {
+      "tier": 1,
+      "files": [
+        "DOCTRINE.md"
+      ],
+      "owns": [
+        "everything: wins any conflict with any other file in this repository"
+      ]
+    },
+    {
+      "tier": 2,
+      "files": [
+        "contracts/EDI-PLAYBOOK.md",
+        "contracts/EDI-MANDATE.md"
+      ],
+      "owns": [
+        "purpose, values, seat meanings, priority (Playbook)",
+        "the frame: P, M, X and F lines; what the system must and must not do (Mandate)"
+      ]
+    },
+    {
+      "tier": 3,
+      "files": [
+        "contracts/EDI-MACHINE-CONTRACTS.md"
+      ],
+      "owns": [
+        "roles as binding behaviour for program delegates, states, schemas, the pass rule"
+      ]
+    },
+    {
+      "tier": 4,
+      "files": [
+        "contracts/EDI-OPERATING-INSTRUMENT.md"
+      ],
+      "owns": [
+        "the job form: Entry A and B, rules 1-12, I1-I24"
+      ]
+    },
+    {
+      "tier": 5,
+      "files": [
+        "contracts/schemas/job-packet.schema.json",
+        "contracts/schemas/evaluator-record.schema.json",
+        "contracts/schemas/pass.schema.json",
+        "contracts/schemas/fixtures/*"
+      ],
+      "owns": [
+        "field names; requiredness only where stricter than the Contracts (schemas)",
+        "expected verdicts, which win over EDI-EXAMPLE.md (fixtures)"
+      ]
+    },
+    {
+      "tier": 6,
+      "files": [
+        "contracts/EDI-FOR-MACHINES.md",
+        "contracts/EDI-QUICKSTART.md",
+        "contracts/EDI-EXAMPLE.md"
+      ],
+      "owns": [
+        "reading order and hard bans (For Machines); teaching and illustration only (Quickstart, Example)"
+      ]
+    }
+  ],
+  "domains": {
+    "everything": "DOCTRINE.md",
+    "purpose, values, seat meanings, priority": "contracts/EDI-PLAYBOOK.md",
+    "frame and failure signals (P, M, X, F)": "contracts/EDI-MANDATE.md",
+    "roles as binding behaviour, states, schemas, pass rule": "contracts/EDI-MACHINE-CONTRACTS.md",
+    "job form": "contracts/EDI-OPERATING-INSTRUMENT.md",
+    "field names": "contracts/schemas/job-packet.schema.json",
+    "expected verdicts": "contracts/schemas/fixtures/*",
+    "reading order and hard bans": "contracts/EDI-FOR-MACHINES.md"
+  },
+  "lateral": [
+    {
+      "name": "custody/v1",
+      "source": "https://github.com/evaluatordriven/custody",
+      "governs": "the retained record's own fields and terms",
+      "note": "Not a rank. DOCTRINE.md defers to it (the doctrine never redefines the record's terms), so it never conflicts with tier 1."
+    }
+  ],
+  "no_authority": [
+    "README.md",
+    "CHANGELOG.md",
+    "AUTHORITY.json",
+    "LICENSE",
+    ".gitignore",
+    "evidence/*",
+    "tools/*",
+    ".github/*",
+    "contracts/README.md",
+    "contracts/EDI-TOOLS.md",
+    "contracts/EDI-RULE-INDEX.json",
+    "contracts/MANIFEST.sha256",
+    "contracts/tools/*",
+    "contracts/schemas/templates/*",
+    "contracts/.gitignore"
+  ],
+  "reading_order": [
+    "contracts/EDI-FOR-MACHINES.md",
+    "DOCTRINE.md",
+    "contracts/EDI-PLAYBOOK.md",
+    "contracts/EDI-QUICKSTART.md",
+    "contracts/EDI-OPERATING-INSTRUMENT.md",
+    "contracts/EDI-MACHINE-CONTRACTS.md",
+    "contracts/EDI-MANDATE.md",
+    "contracts/EDI-EXAMPLE.md"
+  ],
+  "conflict_rule": [
+    "A higher tier wins. The file on the lower tier is the defect, and it is fixed there; a higher tier is never edited to match a lower one.",
+    "Same tier: first test the disagreement against every higher tier, nearest first, up to DOCTRINE.md. The first tier that answers the question, directly or by clear entailment, decides it, and the same-tier file that disagrees with it is the defect.",
+    "If no higher tier answers it, escalate to the Owner (tier 0) as needs_owner, with the two conflicting passages, each higher-tier file checked and why it did not settle the question, and a recommendation.",
+    "Within a tier, each domain has one owner file (domains above)."
+  ],
+  "not_yet_carried": {}
+}

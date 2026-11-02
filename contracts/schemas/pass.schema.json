@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://e-di.local/schemas/pass.schema.json",
+  "title": "E-DI pass — one run of one channel against one artifact, filed beside the record that names it. A pass of the checker is not C8.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pass_id",
+    "kind",
+    "status",
+    "channel",
+    "rubric_sha256",
+    "code_sha256",
+    "run_ref"
+  ],
+  "properties": {
+    "pass_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "kind": {
+      "description": "scored — the pass produced a per-dimension score. confirmation — the pass read a rule through a second channel to cross-check a reading another channel produced. How a confirmation reading weighs is the instrument's declaration, not this schema's.",
+      "enum": ["scored", "confirmation"]
+    },
+    "status": {"enum": ["filed", "void"]},
+    "void_cause": {
+      "description": "Required when status is void: why the pass produced no usable reading. A pass that was attempted and produced nothing is filed as void, never omitted.",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "channel": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "provider": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "model": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "family": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "rubric_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "code_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "run_ref": {
+      "description": "The host's own identifier for the run, recorded as the host's value. This corpus does not interpret it, and no corpus rule may require a host-specific name.",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "scores": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["dimension", "score"],
+        "properties": {
+          "dimension": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "score": {"type": "number"},
+          "observation": {"type": "string"}
+        }
+      }
+    },
+    "instance_extensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "label"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "label": {"const": "instance-specific"},
+          "value": true
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "comment": "A void pass names its cause and carries no scores. A filed pass carries scores: a pass that observed nothing is void, not filed-and-empty.",
+      "if": {"required": ["status"], "properties": {"status": {"const": "void"}}},
+      "then": {"required": ["void_cause"], "not": {"required": ["scores"]}},
+      "else": {"required": ["scores"]}
+    }
+  ],
+  "comment": "Whether a channel is a model channel is NOT machine-decidable here: this corpus defines no channel vocabulary, and it does not invent one (the P0/P1/P2 precedent). `provider`, `model` and `family` are therefore validated when present and their absence where the channel is a model is an audit item under C34, not a structural error. Family is what §4 role independence turns on."
+}

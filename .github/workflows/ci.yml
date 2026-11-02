@@ -1,0 +1,43 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  chain:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Each checker is seen failing on planted defects first
+        run: python3 tools/check_authority.py --selftest && python3 tools/check_downhill.py --selftest
+      - name: The chain of command holds (AUTHORITY.json)
+        run: python3 tools/check_authority.py
+      - name: Every lower tier agrees with the tiers above it
+        run: python3 tools/check_downhill.py --strict
+  contracts:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    strategy:
+      matrix:
+        python: ["3.10", "3.12"]
+    defaults:
+      run:
+        working-directory: contracts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Contracts are consistent and regenerate byte-identically (standard library only)
+        run: python3 tools/check_consistency.py
+      - name: Manifest verifies
+        run: python3 tools/build_manifest.py --verify
+      - name: Regeneration left nothing changed
+        run: git diff --exit-code -- . && test -z "$(git status --porcelain -- . ':!out')"
+      - name: With jsonschema installed, every fixture still gets its expected verdict
+        run: |
+          pip install "jsonschema==4.26.0"
+          python3 tools/check_consistency.py

@@ -2,7 +2,7 @@
 
 **E-DI: Evaluator-Driven Iteration. A doctrine for delegating work so that quality survives.**
 
-Version 0.1 · ratified 2026-10-25 · Steve Moitozo II · Licence: CC BY 4.0
+Version 0.2 · ratified 2026-11-02 (v0.1 ratified 2026-10-25) · Steve Moitozo II · Licence: CC BY 4.0
 
 ---
 
@@ -31,9 +31,9 @@ keeps the decisions only they can make. And their decision gets written beside t
 
 Two parties are not readers but **authorities**: the **Buyer**, whose fitness test the work must pass,
 and the **Subject-matter Expert**, whose quality test it must pass.
-Their standard of “well done” is the one that counts. ⟨Owner, 2026-10-08⟩
+Their standard of “well done” is the one that counts.
 
-**The pain is one defect with three faces: quality that cannot be accounted for.** ⟨Owner, 2026-10-08⟩
+**The pain is one defect with three faces: quality that cannot be accounted for.**
 
 - **The signature.** You cannot put a name on work whose quality you cannot account for.
 - **Guilt.** The practitioner got a good result and cannot say what they did to get it. It feels as if the
@@ -46,7 +46,7 @@ Their standard of “well done” is the one that counts. ⟨Owner, 2026-10-08�
 acceptable as what it replaces?" And the decision-maker wants to see that for themselves, not take it on faith.
 Evaluator Driven answers it the only honest way. Hold the work to the bar you would hold your people's
 work to: the same Subject-matter Expert's standard, the same Buyer's test. Set that bar before the work begins and have the work judged by an Evaluator who did not make it. Work that passes has been judged to meet that bar, and the record lets
-you check it yourself. Work that does not goes back to the Maker or comes to you, the Owner. ⟨Owner, 2026-10-08; evaluatordriven.com⟩
+you check it yourself. Work that does not goes back to the Maker or comes to you, the Owner.
 
 **The acceptance principle.** In the Owner's words:
 
@@ -55,23 +55,21 @@ you check it yourself. Work that does not goes back to the Maker or comes to you
 
 That is the stricter claim, not the softer one. A standard that judged only methods could be satisfied by
 using approved tools badly. A standard that judges the work against named tests leaves nothing to
-hide behind, and makes admitting the tool a detail rather than a confession. ⟨Owner, 2026-10-08⟩
+hide behind, and makes admitting the tool a detail rather than a confession.
 
 **The big bet.** The same job, run inside a well-managed and well-judged loop, beats the same job run without one. The corollary, if the bet holds, is what makes it matter: quality comes from the judging and detailed feedback more than from the size of the Maker.
 So, a modest, cheap, even locally hosted model inside the loop can produce work that passes the bar. This
 is why Evaluator Driven exists. §8 sets out the evidence so far, and what would settle it.
-⟨Mandate §8, B.1.5; Owner, 2026-10-24⟩
 
 **Why now.** Generation used to be the expensive step, so outputs were checked carefully. Now producing work is close to free, and the binding constraint is the judging. The work is still checked. What changes is that the checking itself can now be delegated with confidence, once it meets a standard of its own: a bar set first, an Evaluator tested before it serves, and a record anyone can audit. The person who gets quality from agents is the one who
 invests more in the Evaluator and loop discipline than in the Maker. Delegation fails in known ways. When "done" and "good" are unclear, even human delegation suffers. The work cannot be checked fairly. The worker lacks the skill. The feedback is late or useless.
 Or the work is graded by its Maker, or by judges who know neither the Buyer's need nor what masterful
 work looks like.
-⟨Primer, "Why this exists"; Mandate P2; Owner, 2026-10-25⟩
 
 **The practice is old; the name is new.** Good editors, managers and craftsmen have always defined done
 before handing off. They checked the work against the standard, not the worker's account of it. They sent
 it back with specific feedback, and kept the final call with the person whose name is on it. Agents work
-without you in the room, so your standards survive your absence only if they are written down. ⟨Primer⟩
+without you in the room, so your standards survive your absence only if they are written down.
 
 **Neighbouring methods cover part of the ground.** A specification tells an agent what to build; it does
 not show that the agent built it. A proof covers what a formal specification can state; most work (prose,
@@ -92,207 +90,197 @@ where they meet:
 - the **Specialist**, the subject-matter expert, defines excellence: would a master of the craft accept
   this?
 
-They can pull against each other, and judgement must hold both. **The bar is the intersection of the Buyer's need and
-the Specialist's standard.** ⟨Primer, grounding axiom; Playbook, seats⟩
+<a id="D2.bar"></a>They can pull against each other, and judgement must hold both. **The bar is the intersection of the Buyer's need and
+the Specialist's standard.**
 
 So an Evaluator holds authority on loan. Its standard must carry provenance to both, written down as four
 facts:
 
-1. who the Buyer is;
-2. what they need, and which constraints they named;
-3. whose standard of excellence is borrowed;
-4. where that standard lives, versioned.
+1. <a id="D2.1"></a>who the Buyer is;
+2. <a id="D2.2"></a>what they need, and which constraints they named;
+3. <a id="D2.3"></a>whose standard of excellence is borrowed;
+4. <a id="D2.4"></a>where that standard lives, versioned.
 
-A rubric that cannot answer those four is a preference wearing a score. **No provenance, no authority.** ⟨Primer; Instrument rule 1⟩
+<a id="D2.no-provenance"></a>A rubric that cannot answer those four is a preference wearing a score. **No provenance, no authority.**
 
-Two consequences follow. **You can delegate the doing; you can never delegate responsibility for the
+<a id="D2.frame"></a>Two consequences follow. **You can delegate the doing; you can never delegate responsibility for the
 standard.** And **the doctrine improves how well work meets its frame; it does not set the frame.** Values,
-priorities, risk appetite and taste belong to the Owner. ⟨Primer; Mandate X1–X3⟩
+priorities, risk appetite and taste belong to the Owner.
 
 ---
 
 ## 3. The seats
 
-A seat is a responsibility, not a person. One person or model may hold several seats if that is
+<a id="D3.maker-never-judges"></a>A seat is a responsibility, not a person. One person or model may hold several seats if that is
 disclosed, with one exception that is never waived: **the Maker never judges its own work.**
 
 | Seat | Does | Never does |
 |---|---|---|
-| **Owner** | Owns the outcome. Ratifies the frame. Sets values, priority and risk appetite. Decides what the loop cannot. May override a verdict, recorded as a disposition beside it. | Rewrites a verdict. |
-| **Architect** | Defines done and good, writes the standard, sets the thresholds and bounds, and builds the instruments. | Writes or tunes the standard after seeing a draft. |
-| **Buyer** | Is the one whose problem is being solved. States the need and the constraints. | — |
-| **Specialist** | Supplies the standard of excellence for the craft. | — |
-| **Maker** | Produces the work and revises it against classified feedback. | Judges its own output, or produces the observation it is judged by. |
-| **Evaluator** | Judges the work against the frozen standard, through a channel the Maker did not produce, and returns a structured verdict. | Produces or repairs the work. |
-| **Orchestrator** | Runs the loop: dispatch, feedback, bounds, the record. | Writes the work or scores it. |
+| <a id="D3.Owner"></a>**Owner** | Owns the outcome. Ratifies the frame. Sets values, priority and risk appetite. Decides what the loop cannot. May override a verdict, recorded as a disposition beside it. | Rewrites a verdict. |
+| <a id="D3.Architect"></a>**Architect** | Defines done and good, writes the standard, sets the thresholds and bounds, and builds the instruments. | Writes or tunes the standard after seeing a draft. |
+| <a id="D3.Buyer"></a>**Buyer** | Is the one whose problem is being solved. States the need and the constraints. | — |
+| <a id="D3.Specialist"></a>**Specialist** | Supplies the standard of excellence for the craft. | — |
+| <a id="D3.Maker"></a>**Maker** | Produces the work and revises it against classified feedback. | Judges its own output, or produces the observation it is judged by. |
+| <a id="D3.Evaluator"></a>**Evaluator** | Judges the work against the frozen standard, through a channel the Maker did not produce, and returns a structured verdict. | Produces or repairs the work. |
+| <a id="D3.Orchestrator"></a>**Orchestrator** | Runs the loop: dispatch, feedback, bounds, the record. | Writes the work or scores it. |
 
-⟨Playbook §6; Primer, "The seats, named"; Mandate X4⟩
+**An Evaluator seat is described by what it does and what holds it.** What it does:
 
-**Two forms of the Evaluator seat** have earned names in practice:
-
-- **The adjudicator** is an Evaluator who rules on a disagreement between Evaluators. It reads the work
+- <a id="D3.reader"></a>**The reader** scores or reads each dimension against the frozen bar, through a channel the Maker
+  did not produce. This is the usual form.
+- <a id="D3.adjudicator"></a>**The adjudicator** is an Evaluator who rules on a disagreement between Evaluators. It reads the work
   itself (the code, the text). An adjudicator never resolves a split by averaging.
-- **The test author** writes an independent channel: a test, a planted case, a task for a reader who has
+- <a id="D3.test-author"></a>**The test author** writes an independent channel: a test, a planted case, a task for a reader who has
   never seen the work. The test author is not the Maker and does not see the Maker's reasoning.
 
-⟨practice⟩
+<a id="D3.holder"></a>What holds it: a **person**, a **model** or a **script**. Each is tested the same way (principle 5): in every
+batch it reads a case that should pass and one that should fail. A model is disclosed with its family (below). A
+script is the cheapest Evaluator; put it in front of the others.
 
-**On families of models.** Seats may share an engine, a vendor or a model family. What may not happen is
+<a id="D3.family"></a>**On families of models.** Seats may share an engine, a vendor or a model family. What may not happen is
 an Evaluator seat biased toward the Maker's family. Two models from one family tend to share blind spots, and an Evaluator that shares the Maker's blind spots is the Maker grading itself by another route. So:
 
 - at least one Evaluator differs from the Maker in model family;
 - on every dimension, the Maker's family holds no more than half of the Evaluators;
 - every seat's holder is disclosed, and an undisclosed model family is read the least favourable way: as the Maker's.
 
-⟨custody record v0.9.6, CL2-3; practice⟩
-
 ---
 
 ## 4. Principles
 
-1. **The bar comes first.** Done and good exist before the first draft. A definition written after seeing a draft is an anchor on the draft, not a standard. For existing work (Entry B), the bar comes before the judging instead, and declaration order stands in for blindness. ⟨Mandate M1, M1.1; Primer, core sequence⟩
+1. <a id="D4.1"></a>**The bar comes first.** Done and good exist before the first draft. A definition written after seeing a draft is an anchor on the draft, not a standard. For existing work (Entry B), the bar comes before the judging instead, and declaration order stands in for blindness.
 
-2. **Build the Evaluator before the Maker produces, and show it catching a bad case.** Write the instrument, run it on a case it must fail (the work's own real failure if there is one, otherwise a deliberately bad case), then freeze and hash it. If you have never seen the instrument say no, its yes means nothing. ⟨Instrument A2, rule 3, Entry B's thirteenth rule⟩
+2. <a id="D4.2"></a>**Build the Evaluator before the Maker produces, and show it catching a bad case.** Write the instrument, run it on a case it must fail (the work's own real failure if there is one, otherwise a deliberately bad case), then freeze and hash it. If you have never seen the instrument say no, its yes means nothing.
 
-3. **The Maker never grades its own work, and never produces the observation it's graded on.** The
+3. <a id="D4.3"></a>**The Maker never grades its own work, and never produces the observation it's graded on.** The
    Evaluator sees the work. The observation comes through a channel the Maker did not produce and cannot
    easily fake. Examples: tests the author did not write; a back-translation by a reader who never saw the
-   source; a stranger following the instructions cold. ⟨Mandate M2; Primer, move 2; Instrument rule 2⟩
+   source; a stranger following the instructions cold.
 
-4. **Anchor to ground truth, and name how hard it is.** Judge against the source and known-good
+4. <a id="D4.4"></a>**Anchor to ground truth, and name how hard it is.** Judge against the source and known-good
    references, never the Maker's working copy. Ground truth comes in kinds: an invariant, a document of
-   record, a prior. No dimension may claim more certainty than the channel that carries it. ⟨Primer, move 2;
-   Instrument rule 8⟩
+   record, a prior. No dimension may claim more certainty than the channel that carries it.
 
-5. **Judges are tested too.** Every Evaluator, in every batch, reads at least one case that should pass and
+5. <a id="D4.5"></a>**Judges are tested too.** Every Evaluator, in every batch, reads at least one case that should pass and
    one that should fail. The model serving a seat is part of the instrument, and its strictness,
    stability and cost are measured, not assumed. A verdict rests on at least two scored runs; one run is a
    sample. A judge that is never tested can name a defect and then excuse it, or report checking text that is not there; planted cases are how you find out. Put cheap deterministic checks (length,
    structure, required elements) in front of the judge: they catch what a lenient judge waves through.
    And measure each Evaluator's spread on identical input: a reading that changes between identical runs is
    the instrument's noise, so only what holds across runs counts as a finding.
-   ⟨Instrument rule 10, Entry B's thirteenth rule; Contracts §10.6; practice⟩
 
-6. **Disagreement is information; never average it away.** A scored pass needs both an average threshold and a floor on every dimension, because an average alone lets a fatal defect hide. Readings from
+6. <a id="D4.6"></a>**Disagreement is information; never average it away.** A scored pass needs both an average threshold and a floor on every dimension, because an average alone lets a fatal defect hide. Readings from
    different Evaluators are never averaged: where they agree within the channel's measured spread, the
    agreement is the reading; where they split, the split is shown and adjudicated. A disagreement between
    the work and the standard is traced to its cause, never written off as a bad Maker. Either the work missed the
    standard, the standard moved, the dimension was never authorized, or the frame itself is at fault.
-   ⟨Contracts §3, §10.6; Instrument rule 4; practice⟩
 
-7. **Feedback carries the shortfall, always; a remedy only with real insight.** Say how the work falls
+7. <a id="D4.7"></a>**Feedback carries the shortfall, always; a remedy only with real insight.** Say how the work falls
    short and quote the evidence. Offer a remedy where the Evaluator genuinely sees one. An invented remedy is
    worse than none; a measured remedy withheld is also a defect. A remedy points the way; it is never the fix. The Evaluator does not write the revision, and the Maker owns how the shortfall is fixed. An Evaluator that writes the fix grades its own work on the next round. A score with no observation behind it is not
    a score. And "could not observe" is a different fact from "found missing": what an Evaluator cannot see
-   is recorded as unobserved, never as absent. ⟨Mandate M3; Instrument rule 3; Contracts §5; practice⟩
+   is recorded as unobserved, never as absent.
 
-8. **Feedback must be able to change the next version, or do not loop.** If the Maker cannot act on the
+8. <a id="D4.8"></a>**Feedback must be able to change the next version, or do not loop.** If the Maker cannot act on the
    judgement, iteration is theatre. Identical outputs mean the influence channel is dormant, not weak. A
-   capability gap escalates; it is not retried. ⟨Mandate M3.6, M4; Primer, move 3; Instrument rule 5⟩
+   capability gap escalates; it is not retried.
 
-9. **Inside a loop, a change answers only what the Evaluator reported.** Everything else waits for the next
+9. <a id="D4.9"></a>**Inside a loop, a change answers only what the Evaluator reported.** Everything else waits for the next
    bar. Carry the best work forward: a revision replaces the incumbent only if it is better on at least one
    dimension and worse on none. A trade between dimensions is the Owner's call, never the loop's.
-   ⟨Primer, worked example; Instrument rule 12⟩
 
-10. **Bound the loop, and name every exit.** A cap, a budget and a time limit are supplied, never defaulted,
-    and bind while the run proceeds. Every path ends in a named state. ⟨Mandate M5; Instrument rule 6⟩
+10. <a id="D4.10"></a>**Bound the loop, and name every exit.** A cap, a budget and a time limit are supplied, never defaulted,
+    and bind while the run proceeds. Every path ends in a named state.
 
-11. **Escalate without interrogation.** What can be found out, the agents find out. Values, priority, risk
+11. <a id="D4.11"></a>**Escalate without interrogation.** What can be found out, the agents find out. Values, priority, risk
     and the Buyer's intent go to the Owner, with what was tried, why no observable answer exists, and the
     options with a recommendation. A bare question is work pushed back, not an escalation. **The Owner's
     attention is a budget, and it is measured.** There are three signals, each with a target of zero. The
     same kind of approval asked again and again. Choices put without a recommendation. Answers the Owner has
     to ask to have re-explained. A system that leaves its Owner feeling worked by the machine has failed, however good
-    its output. ⟨Mandate M6, F5; Instrument, "Report where the frame failed"; practice⟩
+    its output.
 
-12. **Evidence or it did not happen.** Every claim cites a file, kept by its content hash. Notes are written
+12. <a id="D4.12"></a>**Evidence or it did not happen.** Every claim cites a file, kept by its content hash. Notes are written
     from what the instruments produced, never from what someone intended. Keep the instrument that
     accepted the work, and the record, with the work: committed beside it, not in local scratch. Pin every
     standard by hash or commit, never by a version name alone; a version number cannot be checked. Figures,
     hashes and record fields are printed by the tool that produced them, never retyped by hand.
-    ⟨Mandate M2, M5, F6; Instrument rule 10; practice⟩
 
-13. **Proportion.** The instrument is as heavy as the risk and no heavier. A smaller instrument is a recorded
+13. <a id="D4.13"></a>**Proportion.** The instrument is as heavy as the risk and no heavier. A smaller instrument is a recorded
     choice. It is never partial: it may not skip a must-ask value, a terminal state or a checked line.
-    ⟨Mandate M7; Instrument rule 11⟩
 
-14. **The level of delegation changes who decides, never what must be supplied.** Declare the rung (do
+14. <a id="D4.14"></a>**The level of delegation changes who decides, never what must be supplied.** Declare the rung (do
     exactly this; research and report; research and recommend; decide and inform; act). No rung waives a
-    must-ask. ⟨Mandate M8; Instrument rule 9⟩
+    must-ask.
 
 ---
 
 ## 5. The loop
 
-**Four moves, each one an answer for the person who signs:** ⟨Owner, 2026-10-08⟩
+**Four moves, each one an answer for the person who signs:**
 
 | Move | What it lets the signer say |
 |---|---|
-| **Set the bar** | I decided what "good" and "done" would mean before I saw the result. |
-| **Produce against it** | The method is written down, so it can happen again, in someone else's hands. |
-| **Evaluate independently** | Somebody who did not make the output checked it. |
-| **Keep the record** | My name is attached, and so is everything it rests on. |
+| <a id="D5.move.1"></a>**Set the bar** | I decided what "good" and "done" would mean before I saw the result. |
+| <a id="D5.move.2"></a>**Produce against it** | The method is written down, so it can happen again, in someone else's hands. |
+| <a id="D5.move.3"></a>**Evaluate independently** | Somebody who did not make the output checked it. |
+| <a id="D5.move.4"></a>**Keep the record** | My name is attached, and so is everything it rests on. |
 
-Behind them sits the core sequence: define quality and done, build the Evaluator, build the Maker, then run the loop. Every loop that works runs in that order. You cannot evaluate what you have not defined. ⟨Primer, core sequence⟩ And a
+<a id="D5.core-sequence"></a>Behind them sits the core sequence: define quality and done, build the Evaluator, build the Maker, then run the loop. Every loop that works runs in that order. You cannot evaluate what you have not defined. And a
 definition written after seeing a draft is anchored on the draft.
 
 ### Two entries
 
-**Commissioned work (Entry A)** does not exist yet. The standard is written first, so it cannot have been
+<a id="D5.entry.A"></a>**Commissioned work (Entry A)** does not exist yet. The standard is written first, so it cannot have been
 tuned to the artifact. Before generating, the Maker states the win and the done rule back in its own
-words: the cheapest defect filter there is. ⟨Instrument, Entry A⟩
+words: the cheapest defect filter there is.
 
-**Existing work (Entry B, retrofit)** is already made, perhaps already in use. You cannot be blind to an
+<a id="D5.entry.B"></a>**Existing work (Entry B, retrofit)** is already made, perhaps already in use. You cannot be blind to an
 answer that exists, so declaration order substitutes for blindness. First collect the work's own standard:
 its docs, tests and claims. Then declare the frame you would hold it to now, and freeze the instrument.
 Only then read anything that could reveal a defect. The record says which reads came before the freeze.
 The past gets a census, not a verdict, and thresholds apply forward. The richest finding is usually the
 work contradicting itself: claims made but not implemented, and behaviour implemented but not claimed.
-⟨Instrument, Entry B⟩
 
 ### One turn of the loop
 
-1. **Freeze.** The bar, the instruments and the bounds are fixed and hashed. The work starts after.
-2. **Make.** The Maker produces a version.
-3. **Observe.** Independent channels produce observations the Maker did not touch.
-4. **Judge.** Evaluator(s) score or read each dimension, each score with its quoted observation, alongside
+1. <a id="D5.step.1"></a>**Freeze.** The bar, the instruments and the bounds are fixed and hashed. The work starts after.
+2. <a id="D5.step.2"></a>**Make.** The Maker produces a version.
+3. <a id="D5.step.3"></a>**Observe.** Independent channels produce observations the Maker did not touch.
+4. <a id="D5.step.4"></a>**Judge.** Evaluator(s) score or read each dimension, each score with its quoted observation, alongside
    their controls. The verdict is a structure, not prose: dimensions, violations (each classified, each
    quoting its evidence), and a recommendation of accept, regenerate, needs owner, or reject.
-5. **Decide the step.** Pass the rule: stop. Fall short: send the classified shortfall back to the Maker
+5. <a id="D5.step.5"></a>**Decide the step.** Pass the rule: stop. Fall short: send the classified shortfall back to the Maker
    as constraints. Nothing else goes back.
-6. **Revise and repeat**, within the bounds.
-
-⟨Primer, "The evaluator's contract", "The run packet"; Example⟩
+6. <a id="D5.step.6"></a>**Revise and repeat**, within the bounds.
 
 ### The exits
 
 A job ends in one of three states: **accepted**, **needs owner**, or **rejected**.
 
-- **Accepted:** the work passed the rule fixed before it began.
-- **Needs owner:** the cap was reached without a pass while the work stayed above the reject floor, or an escalation fired, or the instrument failed. Below the cap, such work goes back to the Maker. The **best version** the job produced goes to the Owner, never to the bin.
-- **Rejected:** below the reject floor. Work not yet in use is discarded. Work already in use is never
+- <a id="D5.exit.accepted"></a>**Accepted:** the work passed the rule fixed before it began.
+- <a id="D5.exit.needs-owner"></a>**Needs owner:** the cap was reached without a pass while the work stayed above the reject floor, or an escalation fired, or the instrument failed. Below the cap, such work goes back to the Maker. The **best version** the job produced goes to the Owner, never to the bin.
+- <a id="D5.exit.rejected"></a>**Rejected:** below the reject floor. Work not yet in use is discarded. Work already in use is never
   discarded by the loop; the verdict stands and what to do is the Owner's call.
 
 Beside the state, the record carries the outcome that explains it. For example:
 
-- *census*: readings only, because no Specialist was named when the job began, so there is no bar to score against; every readable dimension must conform, or the job goes to the Owner;
-- *no observation*: the instrument failed. That is a finding about the instrument, never a zero for the
+- <a id="D5.outcome.census"></a>*census*: readings only, because no Specialist was named when the job began, so there is no bar to score against; every readable dimension must conform, or the job goes to the Owner;
+- <a id="D5.outcome.no-observation"></a>*no observation*: the instrument failed. That is a finding about the instrument, never a zero for the
   work;
-- *no artifact*: the Maker produced nothing.
+- <a id="D5.outcome.no-artifact"></a>*no artifact*: the Maker produced nothing.
 
-There is no state in which a loop quietly ends. ⟨Mandate M5.2; Instrument, Exits⟩
+There is no state in which a loop quietly ends.
 
-**Verdict and disposition are separate acts.** The Owner may ship a rejected piece or shelve an accepted
-one. The verdict stays as the loop produced it; the decision is written beside it. ⟨Mandate X4;
-Instrument rule 7⟩
+<a id="D5.disposition"></a>**Verdict and disposition are separate acts.** The Owner may ship a rejected piece or shelve an accepted
+one. The verdict stays as the loop produced it; the decision is written beside it.
 
 ### Where the human sits
 
-On well-trodden ground, where an Evaluator has a validation record and calibrated thresholds, the loop
+<a id="D5.human"></a>On well-trodden ground, where an Evaluator has a validation record and calibrated thresholds, the loop
 runs without a person and exceptions surface as *needs owner*. On novel ground (a new domain, new stakes, a
 first run), a person stays in every turn until the proxy earns trust. The mistake is not keeping a human too
-long; it is removing one before the proxy has proved itself. This is human-at-the-helm, not just human-in-the-loop: the person sets the bar before the work begins, keeps the decisions only they can make, and decides when the loop has earned the right to run without them. ⟨Primer, "The human stays terminal"⟩
+long; it is removing one before the proxy has proved itself. This is human-at-the-helm, not just human-in-the-loop: the person sets the bar before the work begins, keeps the decisions only they can make, and decides when the loop has earned the right to run without them.
 
 ---
 
@@ -300,32 +288,32 @@ long; it is removing one before the proxy has proved itself. This is human-at-th
 
 Seat no one on reputation, including the Architect.
 
-- **Test every seat on planted cases before it serves.** A Maker shows it can generate and, separately,
+- <a id="D6.1"></a>**Test every seat on planted cases before it serves.** A Maker shows it can generate and, separately,
   revise; an Evaluator shows it can fail what it judges; an Orchestrator shows it stops when the runbook
-  says stop. The Architect's seat is not yet tested this way; that gap is open. ⟨Instrument rule 10; practice⟩
-- **Check every instrument against a valid alternative.** Before an instrument scores anything, run it on a
+  says stop.
+- <a id="D6.2"></a>**Check every instrument against a valid alternative.** Before an instrument scores anything, run it on a
   correct solution built differently from the one its author had in mind. An instrument that fails a valid
-  alternative is measuring the author's design, not the bar. ⟨practice⟩
-- **Have someone independent pre-read the instruments.** The Architect writes the runbook and the scorer;
+  alternative is measuring the author's design, not the bar.
+- <a id="D6.3"></a>**Have someone independent pre-read the instruments.** The Architect writes the runbook and the scorer;
   an adjudicator reads both against the bar before any work starts. Where the instrument and the bar
-  differ, the bar governs. ⟨practice⟩
-- **Pin instruments before use**, and keep them by hash. A rerun with the same rubric and a different
-  runner is a different instrument. ⟨Instrument rule 10⟩
+  differ, the bar governs.
+- <a id="D6.4"></a>**Pin instruments before use**, and keep them by hash. A rerun with the same rubric and a different
+  runner is a different instrument.
 
-Building the custody record showed why. In v0.9.5, two of the Architect's scoring tools scored a preferred design rather than the rules. In v0.9.6 it happened again: the Orchestrator found a tool that would have failed a valid design the brief allowed, and the work was scored again with a corrected tool, both scorings kept. The rules on valid alternatives and independent pre-reads exist to catch that before anything is scored. ⟨custody record v0.9.6: BAR-v0.9.6, theme; qualification-v0.9.6/QUAL-AMENDMENT-1⟩
+[Building the custody record](https://github.com/evaluatordriven/custody/tree/main/record) showed why. In v0.9.5, two of the Architect's scoring tools scored a preferred design rather than the rules. In v0.9.6 it happened again: the Orchestrator found a tool that would have failed a valid design the brief allowed, and the work was scored again with a corrected tool, both scorings kept. The rules on valid alternatives and independent pre-reads exist to catch that before anything is scored.
 
 ---
 
 ## 7. The record
 
-The record is what lets a person sign with integrity and confidence: it shows what the work was measured against, who checked it
+<a id="D7.record"></a>The record is what lets a person sign with integrity and confidence: it shows what the work was measured against, who checked it
 independently, and who accepted it. A loop that leaves no record cannot be trusted by anyone who was not in the room when it was made. The record is how the doctrine reaches someone who wasn’t there to witness the work. It shows what the bar was and who held which seat. It
 shows what each Evaluator saw, how they disagreed, what the Maker changed, and how the job ended. Accepted work that cannot be reconstructed from
-its records counts as a failure of the doctrine (§8, F6). ⟨Mandate M5, F6⟩
+its records counts as a failure of the doctrine (§8, F6).
 
-The interoperable form of that record is the **Evaluator Driven custody record**, `custody/v1`: a
+<a id="D7.custody"></a>The interoperable form of that record is the **Evaluator Driven custody record**, `custody/v1`: a
 hash-chained log and an in-toto predicate, with conformance levels a checker can verify. It is a separate,
-neutral specification with its own repository. It is still a candidate: its v0.9.6 stranger test did not pass, and no product loop yet emits `custody/v1`. ⟨custody record v0.9.6⟩ The record states facts; this doctrine says
+neutral specification with its own repository. The record states facts; this doctrine says
 which facts matter and why. **The doctrine never redefines the record's terms**, and the record never
 depends on the doctrine. A job run under another method can still produce a valid record. The record will
 show how far that job met the practices above.
@@ -334,22 +322,21 @@ show how far that job met the practices above.
 
 ## 8. How you would know it failed
 
-The doctrine names its own failure signals, so it can be judged by them. ⟨Mandate F1–F6⟩
+The doctrine names its own failure signals, so it can be judged by them.
 
-- **F1.** Work ships with no Buyer in the record who asked for it.
-- **F2.** Judging costs more than the errors it catches (on a fair comparison).
-- **F3.** Work scored above the bar is later rejected by the named Buyer or Specialist, and the record
+- <a id="D8.F1"></a>**F1.** Work ships with no Buyer in the record who asked for it.
+- <a id="D8.F2"></a>**F2.** Judging costs more than the errors it catches (on a fair comparison).
+- <a id="D8.F3"></a>**F3.** Work scored above the bar is later rejected by the named Buyer or Specialist, and the record
   cannot say which dimension failed.
-- **F4.** Two honest runs of the same setup disagree by more than the instrument's normal variation.
-- **F5.** The Owner is asked questions the system could have answered itself. Or the Owner is forced to carry an attention cost the system could have spared: repeated approvals of the same kind, choices without a
-  recommendation, answers that need re-explaining. ⟨Mandate F5; practice⟩
-- **F6.** Accepted work cannot be reconstructed from its records.
+- <a id="D8.F4"></a>**F4.** Two honest runs of the same setup disagree by more than the instrument's normal variation.
+- <a id="D8.F5"></a>**F5.** The Owner is asked questions the system could have answered itself. Or the Owner is forced to carry an attention cost the system could have spared: repeated approvals of the same kind, choices without a
+  recommendation, answers that need re-explaining.
+- <a id="D8.F6"></a>**F6.** Accepted work cannot be reconstructed from its records.
 
 **What is claimed is repeatability, not scale.** The bar, the instruments and the record exist so a result
 can be reproduced by someone else. Nothing yet supports a claim that the method scales, so none is made. Repeatability is designed in, not yet shown: no result here is known to have been reproduced by someone else.
-⟨Owner, 2026-10-08⟩
 
-**The evidence for the big bet, so far.** ⟨Mandate §8, B.1.5; evidence/software-defect-pairs.md; evaluation records⟩
+**The evidence for the big bet, so far.**
 
 | Case | Maker | What was compared | Result |
 |---|---|---|---|
@@ -363,20 +350,19 @@ can be reproduced by someone else. Nothing yet supports a claim that the method 
 1. **The feedback must be able to change the work.** The first translation loop (2026-09-03) gave its
    translation model feedback that model could not act on. Of 25 jobs, 1 was accepted. Seven Lingala jobs never produced a score; the rest wandered, mostly between 1 and 4, without converging. Nine of 12 Swahili jobs scored exactly 7.8 on both iterations, with the same one-line feedback: consistent with a dormant influence channel. The next day a step was added that rewrote the source in
    response to the Evaluator's complaints. A different 20-row batch then passed 17 of 20 at a threshold of 7.5, under the same loop's own judge. The main change was a way to act on the judgement. That judge was later found to pass planted defects (condition 2), so the rise shows the loop could act on its judge, not how far quality rose.
-   ⟨Primer, move 3; practice⟩
 2. **The judge must be qualified.** The later audit shows the second: a loop with an untested Evaluator
    passes defects with confidence. Well-judged is something you measure with planted cases (§6), not something you assume.
 3. **The work must stay inside the loop.** Changes made outside it are neither judged nor recorded. In the
-   mobile app, files were later changed with no gate, and the archived source now fails its own tests. ⟨mobile-app review, 2026-10-24⟩
+   mobile app, files were later changed with no gate, and the archived source now fails its own tests.
 
-Only the software-defect pair and the Lingala reading are published (evidence/). The other translation and mobile-app records are the Owner's and not yet published; read those rows as his report.
+Only the [software-defect pair](evidence/software-defect-pairs.md) and the [Lingala reading](evidence/lingala-reading-2026-09-06.md) are published. The other translation and mobile-app records are the Owner's and not yet published; read those rows as his report.
 
 The bet is on a loop that meets all three.
 
 **What would settle it:** paired jobs in more than one domain. Each pair keeps the same Buyer, the same
 standard and the same class of work, and runs once with the loop and once without. Each is published with
 its record, and the results are reported as a rate that counts the misses as well as the wins, with outcomes beyond the pass: use, early detection and cost. Until then the bet is supported in software, shown working but not compared in translation, and not yet established across domains. This document says so rather than borrowing
-authority it has not earned. ⟨Mandate B.1.5⟩
+authority it has not earned.
 
 ---
 
@@ -384,24 +370,26 @@ authority it has not earned. ⟨Mandate B.1.5⟩
 
 - **Not a method for making things.** Make whatever products you like with whatever tools you like: by specification, by proof, by hand, by agent. Evaluator Driven governs how the work is judged, fed back and carried, and so it shapes the loop the Maker works in.
 - **Not a source of values.** It does not set values, priorities, risk appetite or taste; the Owner does,
-  and the doctrine then scores against that standard. ⟨Mandate X1–X3⟩
+  and the doctrine then scores against that standard.
 - **Not a replacement for the Owner's override**, which is recorded beside the verdict, never over it.
-  ⟨Mandate X4⟩
-- **Not a product.** It is a set of rules you adopt, not a product you buy. ⟨evaluatordriven.com⟩
-- **Not certification.** A record shows how a judgement was made, not that the work is correct. ⟨custody record, SPEC §1⟩
+- **Not a product.** It is a set of rules you adopt, not a product you buy.
+- **Not certification.** A record shows how a judgement was made, not that the work is correct.
 - **Not finished.** It is versioned, and it changes when a job shows that it must, not before. No rule
-  without a job that needed it. ⟨Instrument, Refusals⟩
+  without a job that needed it.
 
 ---
 
 ## 10. Lineage
 
 **Origin.** The doctrine was first written down on 2026-08-31 as "Evaluator Driven Iteration": define
-quality first, build the evaluator before the generator, close the loop. ⟨Primer, references⟩ It grew into a corpus of seven weight-bearing documents: a quickstart, a playbook, an operating instrument, machine contracts, a mandate, a worked example and a guide for machines. A primer teaches it but is not weight-bearing. The Owner ratified each document and its later amendments, and the set is held at commit `a48a464`. The Primer was itself revised under the method: Evaluators from five model families, none of them the reviser, scoring against an instrument written before the revision existed. The corpus is private; these facts are the Owner's record of it. ⟨Playbook, load map; Primer, revision note v1.1⟩
+quality first, build the evaluator before the generator, close the loop. It grew into seven weight-bearing
+documents: a quickstart, a playbook, an operating instrument, machine contracts, a mandate, a worked example
+and a guide for machines. The Owner ratified each document and its later amendments. They are published in
+`contracts/`, below this doctrine in the chain of command (`AUTHORITY.json`).
 
 **This articulation.** Version 0.1 restates the corpus for readers who will never open it. It adds the
-lessons of the custody-record releases v0.9.4 to v0.9.6, marked ⟨practice⟩ above. Its rules: test Evaluators with planted cases in every batch; never average disagreements; check instruments against valid alternatives and pre-read them before use; keep evidence by hash, and write notes from output, not intent. Those
-releases were themselves run under this doctrine, and their records are public: https://github.com/smoitozo/evaluatordriven, tags v0.9.4 to v0.9.6. One rule departs from the
+lessons of the custody-record releases v0.9.4 to v0.9.6. Its rules: test Evaluators with planted cases in every batch; never average disagreements; check instruments against valid alternatives and pre-read them before use; keep evidence by hash, and write notes from output, not intent. Those
+releases were themselves run under this doctrine, and their records are public: https://github.com/evaluatordriven/custody, tags v0.9.4 to v0.9.6. One rule departs from the
 corpus on purpose. The corpus barred the Maker's family from the Evaluator seat outright. This version adopts the custody record's principle: the seat must not be biased toward the Maker's family (§3). The record's rule, CL2-3, also requires a different endpoint.
 
 **What it stands on.** Covey's stewardship delegation (desired results, guidelines, resources,
@@ -411,11 +399,11 @@ get worse, while structured external feedback helps (Gou et al., *CRITIC*, 2023)
 form: a written, versioned standard, critiques that cite the clause they enforce, and revisions that
 answer the citation. Evaluation-driven development: a scorecard before optimization, dimensions rather
 than a pooled average. Teach-back from clinical practice: the person repeats the instruction in their own
-words, because "do you understand?" reliably gets a yes. ⟨Instrument, "What we stand on"; Primer, move 1⟩
+words, because "do you understand?" reliably gets a yes.
 
-**Applied to itself.** This document had to pass the gate it describes. The Architect drafted it for the Owner's edit; a reader from another model family checked it for claims its evidence does not support; the Owner ratified it on 2026-10-25.
+**Applied to itself.** This document had to pass the gate it describes. The Architect drafted v0.1 for the Owner's edit; a reader from another model family checked it for claims its evidence does not support; the Owner ratified it on 2026-10-25. The Architect drafted v0.2; this repository's checkers verified that every rule is carried below it and that its text is v0.1 word for word apart from the recorded changes; the Owner ratified it on 2026-11-02. Version 0.2 has not had a reader from another model family.
 
 ---
 
-*Evaluator Driven, v0.1. © 2026 Steve Moitozo II. Licensed under CC BY 4.0.
+*Evaluator Driven, v0.2. © 2026 Steve Moitozo II. Licensed under CC BY 4.0.
 evaluatordriven.com*

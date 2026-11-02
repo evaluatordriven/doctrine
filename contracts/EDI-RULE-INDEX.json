@@ -1,0 +1,623 @@
+{
+  "corpus": "E-DI",
+  "contracts_version": "1.26.0",
+  "generated_from": "EDI-MACHINE-CONTRACTS.md",
+  "extracted_by": "extract_rules.py (v3 \u2014 reads this corpus, parses \u00a79's table)",
+  "dispositions": {
+    "LINE": "enforced by an addressed \u00a79 line \u2014 audited per deployment",
+    "SCHEMA": "enforced structurally by a named schema or hook",
+    "NONE": "a rule about the corpus: definition, rationale, or interface description"
+  },
+  "counts": {
+    "in_scope": 86,
+    "line": 74,
+    "schema": 2,
+    "none": 10,
+    "uncovered": 0
+  },
+  "generated_from_sha256": "4bbb34f0dce1a13e9edfcf500d2c7d490c76dd71b801027591f14e62c49a1870",
+  "rules": [
+    {
+      "id": "R1",
+      "section": "0",
+      "disposition": "NONE",
+      "via": "definition of the term NORMATIVE",
+      "text": "**NORMATIVE** \u2014 required. An implementation that violates it is not implementing E-DI."
+    },
+    {
+      "id": "R2",
+      "section": "1.1",
+      "disposition": "LINE",
+      "via": "C1",
+      "text": "**NORMATIVE:** record the Buyer with provenance on every job. Record the Specialist with provenance"
+    },
+    {
+      "id": "R3",
+      "section": "1.2",
+      "disposition": "LINE",
+      "via": "C2",
+      "text": "**NORMATIVE:** name what the Evaluator judges against \u2014 source document, invariant, test, reference"
+    },
+    {
+      "id": "R4",
+      "section": "1.3",
+      "disposition": "LINE",
+      "via": "C3",
+      "text": "**NORMATIVE:** dimensions, anchors, pass rule, violation classes, verdict enum \u2014 and the Evaluator"
+    },
+    {
+      "id": "R5",
+      "section": "1.4",
+      "disposition": "NONE",
+      "via": "build-order step \u2014 no conformance content beyond \u00a71's ordering",
+      "text": "**NORMATIVE:** the Maker is stood up after the Evaluator, so nothing is generated against a standard"
+    },
+    {
+      "id": "R6",
+      "section": "1.5",
+      "disposition": "NONE",
+      "via": "build-order step \u2014 no conformance content beyond \u00a71's ordering",
+      "text": "**NORMATIVE:** loop mechanics, bounds, state store, escalation path."
+    },
+    {
+      "id": "R7",
+      "section": "1.6",
+      "disposition": "LINE",
+      "via": "C19",
+      "text": "**NORMATIVE:** ground truth carries two properties beyond its identity \u2014 a **version** and a"
+    },
+    {
+      "id": "R8",
+      "section": "1.6",
+      "disposition": "LINE",
+      "via": "C19",
+      "text": "**NORMATIVE:** a dimension's stated hardness must be no harder than the ground truth that carries it."
+    },
+    {
+      "id": "R9",
+      "section": "1.7",
+      "disposition": "LINE",
+      "via": "C20",
+      "text": "**NORMATIVE:** the frame \u2014 what the work must accomplish, and what it must not do \u2014 is supplied as a"
+    },
+    {
+      "id": "R10",
+      "section": "1.7",
+      "disposition": "LINE",
+      "via": "C20",
+      "text": "**NORMATIVE:** the mandate's scope and exclusions bound the dimension set. A dimension the mandate"
+    },
+    {
+      "id": "R11",
+      "section": "1.7",
+      "disposition": "LINE",
+      "via": "C21",
+      "text": "**NORMATIVE \u2014 the ground truth is not the Maker's to improve.** Where the mandate names a source"
+    },
+    {
+      "id": "R12",
+      "section": "1.7",
+      "disposition": "LINE",
+      "via": "C23",
+      "text": "**NORMATIVE \u2014 a doctrine that judges has a mandate too.** Where a doctrine, rubric or corpus judges"
+    },
+    {
+      "id": "R13",
+      "section": "2",
+      "disposition": "LINE",
+      "via": "C28",
+      "text": "**NORMATIVE \u2014 a job records its terminal state *and* the outcome it exited under.** The state alphabet is"
+    },
+    {
+      "id": "R14",
+      "section": "2",
+      "disposition": "LINE",
+      "via": "C31",
+      "text": "**NORMATIVE \u2014 the Maker-side outcome.** A run in which the Maker produced **no artifact** records outcome"
+    },
+    {
+      "id": "R15",
+      "section": "2",
+      "disposition": "LINE",
+      "via": "C9",
+      "text": "**NORMATIVE:** `rejected` means *below the reject floor*. Reaching the cap without passing is"
+    },
+    {
+      "id": "R16",
+      "section": "2",
+      "disposition": "LINE",
+      "via": "C11",
+      "text": "**NORMATIVE:** escalation classes fire from `evaluating` directly (values or doctrine involved \u2192"
+    },
+    {
+      "id": "R17",
+      "section": "3",
+      "disposition": "LINE",
+      "via": "C4",
+      "text": "**NORMATIVE:** a pass requires both an average threshold **and** a per-dimension floor. An"
+    },
+    {
+      "id": "R18",
+      "section": "3",
+      "disposition": "LINE",
+      "via": "C4",
+      "text": "**NORMATIVE:** the thresholds are fixed **before** the run and recorded with the job."
+    },
+    {
+      "id": "R19",
+      "section": "3",
+      "disposition": "LINE",
+      "via": "C5",
+      "text": "**NORMATIVE:** the iteration cap is finite and recorded with the job. Iterations are counted from"
+    },
+    {
+      "id": "R20",
+      "section": "3",
+      "disposition": "LINE",
+      "via": "C8",
+      "text": "**NORMATIVE:** dimension scores are integers or one-decimal reals on a 1\u201310 scale, unless the job"
+    },
+    {
+      "id": "R21",
+      "section": "3",
+      "disposition": "LINE",
+      "via": "C33 \u2014 scored frame (ground_truth source/version/hardness, mandate_ref doc+version, escalation route). Not structurally enforced: feedback forms, dimension set, retained-instrument reuse, task classes, escalation classes.",
+      "text": "**NORMATIVE \u2014 the must-ask list.** These are supplied per job and recorded with it, never"
+    },
+    {
+      "id": "R22",
+      "section": "3",
+      "disposition": "LINE",
+      "via": "C33 \u2014 scored frame (ground_truth source/version/hardness, mandate_ref doc+version, escalation route). Not structurally enforced: feedback forms, dimension set, retained-instrument reuse, task classes, escalation classes.",
+      "text": "**NORMATIVE \u2014 the frame a scored job cannot run without (C33).** A `mode: scored` job carries, before generation, a non-empty `ground_truth` (each row: `source`, `version`, `hardness`), a `mandate_ref` of `doc` plus `version`, and a non-empty `escalation` route. Readings jobs are not subject to this. The other must-asks \u2014 the Maker's feedback forms, the dimension set, retained-instrument reuse, ta"
+    },
+    {
+      "id": "R23",
+      "section": "3",
+      "disposition": "SCHEMA",
+      "via": "job-packet.schema.json \u2014 ratified:false forbids terminal accepted and forbids top-level bounds, specialist, and standard_ref",
+      "text": "**NORMATIVE \u2014 when a value cannot be obtained.** If a must-ask value is unavailable (no human, no"
+    },
+    {
+      "id": "R24",
+      "section": "3",
+      "disposition": "LINE",
+      "via": "C29",
+      "text": "**NORMATIVE \u2014 the readings form, where no bar exists yet.** A job with **no Specialist named at the outset**"
+    },
+    {
+      "id": "R25",
+      "section": "4",
+      "disposition": "LINE",
+      "via": "C6",
+      "text": "**NORMATIVE:** the Maker and the Evaluator must not be the same model instance in the same"
+    },
+    {
+      "id": "R26",
+      "section": "4",
+      "disposition": "SCHEMA",
+      "via": "job-packet.schema.json \u2014 seats are NOT required by the schema; Owner-as-Evaluator is rejected by validate_job_packet and check_role_separation (0028 A). Seven-seat object is not schema-required.",
+      "text": "**NORMATIVE \u2014 the seats are named, and they are separate.** The seats are a **job-level fact**: the job packet"
+    },
+    {
+      "id": "R27",
+      "section": "4",
+      "disposition": "LINE",
+      "via": "C37",
+      "text": "**NORMATIVE \u2014 the Orchestrator routes; the Architect designs.** What is to be built next, and therefore"
+    },
+    {
+      "id": "R28",
+      "section": "4.1",
+      "disposition": "LINE",
+      "via": "C25",
+      "text": "**NORMATIVE \u2014 the Maker is a supplied, resourced choice.** The Maker is a must-ask value,"
+    },
+    {
+      "id": "R29",
+      "section": "4.1",
+      "disposition": "LINE",
+      "via": "C25",
+      "text": "**NORMATIVE \u2014 an iteration must be able to address what it was given.** A regeneration tasked with a"
+    },
+    {
+      "id": "R30",
+      "section": "4.1",
+      "disposition": "LINE",
+      "via": "C36",
+      "text": "**NORMATIVE \u2014 an iteration names what it sends back.** Where the verdict is `regenerate`, the record carries"
+    },
+    {
+      "id": "R31",
+      "section": "4.1",
+      "disposition": "LINE",
+      "via": "C25",
+      "text": "**NORMATIVE \u2014 resourcefulness is demonstrated, not asserted.** A Maker may not be recorded as suitable"
+    },
+    {
+      "id": "R32",
+      "section": "4.1",
+      "disposition": "LINE",
+      "via": "C16",
+      "text": "**NORMATIVE \u2014 who applies the algebra.** The Evaluator emits scores, violations, and a"
+    },
+    {
+      "id": "R33",
+      "section": "4.2",
+      "disposition": "LINE",
+      "via": "C38",
+      "text": "**NORMATIVE \u2014 the Maker and the Evaluator speak only through the Orchestrator.** The Maker and the Evaluator"
+    },
+    {
+      "id": "R34",
+      "section": "4.2",
+      "disposition": "LINE",
+      "via": "C39",
+      "text": "**NORMATIVE \u2014 held-out material never reaches the Maker.** No message to the Maker contains held-out"
+    },
+    {
+      "id": "R35",
+      "section": "4.2",
+      "disposition": "LINE",
+      "via": "C40",
+      "text": "**NORMATIVE \u2014 dispatch runs on the Orchestrator; per-act approval is optional and job-declared.** A Maker"
+    },
+    {
+      "id": "R36",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C8",
+      "text": "**NORMATIVE:**"
+    },
+    {
+      "id": "R37",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C27",
+      "text": "**NORMATIVE \u2014 the `observation` field is required on every dimension.** The dimension object carries"
+    },
+    {
+      "id": "R38",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C26",
+      "text": "**NORMATIVE \u2014 the shortfall is required; the remedy is not.** Every violation states what the item"
+    },
+    {
+      "id": "R39",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C26",
+      "text": "**NORMATIVE \u2014 a fabricated remedy is worse than an absent one.** A remedy supplied to complete the"
+    },
+    {
+      "id": "R40",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C30",
+      "text": "**NORMATIVE \u2014 the record names the instrument in force.** Every record carries the instrument it was made"
+    },
+    {
+      "id": "R41",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C34",
+      "text": "**NORMATIVE \u2014 a record names the passes that produced it.** A \u00a75 record carries `passes`: one entry"
+    },
+    {
+      "id": "R42",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C34",
+      "text": "**NORMATIVE \u2014 a filed pass carries its own shape.** A pass filed beside the record (\u00a710.1) carries:"
+    },
+    {
+      "id": "R43",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C34",
+      "text": "**NORMATIVE \u2014 a record may not name a pass that is not filed.** Every pass a \u00a75 record names is filed"
+    },
+    {
+      "id": "R44",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C34",
+      "text": "**NORMATIVE \u2014 the check, and what failing it means.** A checker fails a record naming a pass that is not"
+    },
+    {
+      "id": "R45",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C34",
+      "text": "**NORMATIVE \u2014 this clause defines no spread.** The range across the passes on one artifact is **not**"
+    },
+    {
+      "id": "R46",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C36",
+      "text": "**NORMATIVE \u2014 a dimension below the floor is a violation, and it names the dimension.** Where a dimension"
+    },
+    {
+      "id": "R47",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C35",
+      "text": "**NORMATIVE \u2014 one dimension, one name.** The instrument's dimension list is the vocabulary for the job: a"
+    },
+    {
+      "id": "R48",
+      "section": "5",
+      "disposition": "LINE",
+      "via": "C35",
+      "text": "**NORMATIVE \u2014 a pass that attributes to nothing is an error, not a label.** Where a filed pass names a"
+    },
+    {
+      "id": "R49",
+      "section": "6",
+      "disposition": "NONE",
+      "via": "orchestrator interface description",
+      "text": "**Inputs:** job id; artifact specification; standard (rubric or tests) with its version; ground"
+    },
+    {
+      "id": "R50",
+      "section": "6",
+      "disposition": "NONE",
+      "via": "orchestrator interface description",
+      "text": "**Outputs per iteration:** the artifact version, the full Evaluator record (\u00a75), the iteration"
+    },
+    {
+      "id": "R51",
+      "section": "6",
+      "disposition": "LINE",
+      "via": "C12",
+      "text": "**Must persist:** every iteration's artifact + verdict + state transition, so a terminal decision"
+    },
+    {
+      "id": "R52",
+      "section": "6",
+      "disposition": "LINE",
+      "via": "C16",
+      "text": "**Must enforce:** the cap; the budget; the state machine; role separation; that no artifact"
+    },
+    {
+      "id": "R53",
+      "section": "6",
+      "disposition": "LINE",
+      "via": "C11",
+      "text": "**Must escalate (not decide):** values or doctrine questions; capability gaps; any verdict where"
+    },
+    {
+      "id": "R54",
+      "section": "7.1",
+      "disposition": "LINE",
+      "via": "C6",
+      "text": "**NORMATIVE:** the Evaluator is not the Maker (\u00a74). This is the independence implementations satisfy first,"
+    },
+    {
+      "id": "R55",
+      "section": "7.2",
+      "disposition": "LINE",
+      "via": "C7",
+      "text": "**NORMATIVE:** two blindnesses, both required, plus one thing that must not be built. The **observation"
+    },
+    {
+      "id": "R56",
+      "section": "7.3",
+      "disposition": "LINE",
+      "via": "C10",
+      "text": "**NORMATIVE:** after any write to an external system, read the target back and assert equality. A"
+    },
+    {
+      "id": "R57",
+      "section": "7.3",
+      "disposition": "LINE",
+      "via": "C15",
+      "text": "**NORMATIVE \u2014 declare what \"equality\" means.** State the normalization before comparing (for"
+    },
+    {
+      "id": "R58",
+      "section": "7.3",
+      "disposition": "LINE",
+      "via": "C15",
+      "text": "**NORMATIVE \u2014 carry a per-run value.** The record written must contain at least one value that is"
+    },
+    {
+      "id": "R59",
+      "section": "8",
+      "disposition": "LINE",
+      "via": "C18",
+      "text": "labels them as instance-specific in every artifact it emits,"
+    },
+    {
+      "id": "R60",
+      "section": "8",
+      "disposition": "LINE",
+      "via": "C18",
+      "text": "does not weaken \u00a73, \u00a74, or \u00a77,"
+    },
+    {
+      "id": "R61",
+      "section": "8",
+      "disposition": "LINE",
+      "via": "C18",
+      "text": "records them with the job, so a later reader can tell doctrine from local invention."
+    },
+    {
+      "id": "R62",
+      "section": "10.1",
+      "disposition": "LINE",
+      "via": "C13",
+      "text": "**NORMATIVE:** two records are retained with the artifact. They are separate objects, and they are not"
+    },
+    {
+      "id": "R63",
+      "section": "10.1",
+      "disposition": "LINE",
+      "via": "C34",
+      "text": "**NORMATIVE \u2014 the passes are retained with them.** Each pass a record names is filed beside it with its own"
+    },
+    {
+      "id": "R64",
+      "section": "10.1",
+      "disposition": "LINE",
+      "via": "C13",
+      "text": "**NORMATIVE \u2014 the accepted-risk ledger is the violations, not the dimensions.** Because a dimension"
+    },
+    {
+      "id": "R65",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE:** a revision runs the retained instrument on the revised artifact, and the comparison of"
+    },
+    {
+      "id": "R66",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE:** re-use of a retained instrument is itself a must-ask value, supplied per revision job and"
+    },
+    {
+      "id": "R67",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE:** the revision job carries **fresh bounds**. Its iteration cap, budget, and pass rule are"
+    },
+    {
+      "id": "R68",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE \u2014 regression is measured against the control, not against a stored score.** A dimension that"
+    },
+    {
+      "id": "R69",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE \u2014 a revision carries a control in the same batch. Never compare against a stored number.**"
+    },
+    {
+      "id": "R70",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE \u2014 the control is measured, not assumed.** The control is N repeated evaluations of the fixed"
+    },
+    {
+      "id": "R71",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE \u2014 a run without a same-batch control is uncontrolled, and may not attribute.** It may still be"
+    },
+    {
+      "id": "R72",
+      "section": "10.2",
+      "disposition": "LINE",
+      "via": "C14",
+      "text": "**NORMATIVE \u2014 never attribute change from a pooled average.** An average may be reported as a run's"
+    },
+    {
+      "id": "R73",
+      "section": "10.3",
+      "disposition": "LINE",
+      "via": "C24",
+      "text": "**NORMATIVE:** a retained rubric is a statement about a frame, and frames move. Re-derive the rubric \u2014"
+    },
+    {
+      "id": "R74",
+      "section": "10.3",
+      "disposition": "LINE",
+      "via": "C24",
+      "text": "**NORMATIVE:** when the instrument changes, record that it changed, with the revision. A comparison"
+    },
+    {
+      "id": "R75",
+      "section": "10.4",
+      "disposition": "NONE",
+      "via": "explanation of why the two governance objects fail differently",
+      "text": "**NORMATIVE:** the same two records govern two different things, and they fail differently."
+    },
+    {
+      "id": "R76",
+      "section": "10.5",
+      "disposition": "LINE",
+      "via": "C13",
+      "text": "**NORMATIVE:** retention was stated permissively at first \u2014 keep the rubric *or* the Evaluator's identity, *or both*."
+    },
+    {
+      "id": "R77",
+      "section": "10.5",
+      "disposition": "LINE",
+      "via": "C13",
+      "text": "**NORMATIVE:** the minimum is mandatory for any job that claims custody, and no job may claim it while"
+    },
+    {
+      "id": "R78",
+      "section": "10.6",
+      "disposition": "LINE",
+      "via": "C22",
+      "text": "**NORMATIVE:** every observation channel declares its own **spread** \u2014 the `max \u2212 min` of N repeated"
+    },
+    {
+      "id": "R79",
+      "section": "10.6",
+      "disposition": "LINE",
+      "via": "C22",
+      "text": "**NORMATIVE:** a delta inside the channel's declared spread is **not a result**. It may not be"
+    },
+    {
+      "id": "R80",
+      "section": "10.6",
+      "disposition": "LINE",
+      "via": "C22",
+      "text": "**NORMATIVE:** the spread is re-measured whenever a \u00a710.3 trigger fires \u2014 the Buyer, the Specialist's"
+    },
+    {
+      "id": "R81",
+      "section": "12",
+      "disposition": "NONE",
+      "via": "corpus self-description \u2014 the baseline label; nothing a deployment is audited for",
+      "text": "**A superseded term.** `needs_human` was renamed `needs_owner` (v1.6). Old name in filed records keeps that meaning; never reuse `needs_human` for anything else."
+    },
+    {
+      "id": "R82",
+      "section": "12",
+      "disposition": "NONE",
+      "via": "the vocabulary rename \u2014 how to read records filed before v1.8, not an implementation duty",
+      "text": "**A second superseded term.** `evidence` / `evidence_channel` were renamed `observation` / `observation_channel` (v1.8). Old names in filed records keep those meanings; never reuse them for the scored fields. (Corpus \u201cevidence, not instructions\u201d labels and ordinary English \u201cevidence\u201d are unchanged.)"
+    },
+    {
+      "id": "R83",
+      "section": "12",
+      "disposition": "NONE",
+      "via": "corpus self-description \u2014 the baseline label; nothing a deployment is audited for",
+      "text": "**This corpus is a labelled baseline** unless its version header names an instrument independent of its authors that judged it; a baseline is citable as the standard and is not available as ground truth for its own successor. There is no Evaluator above this corpus and none is to be built \u2014 the regress terminates at the Principal, by declaration, because a check above the checker inherits the same"
+    },
+    {
+      "id": "R84",
+      "section": "12",
+      "disposition": "LINE",
+      "via": "C23",
+      "text": "**The corpus has a mandate (\u00a71.7).** `EDI-MANDATE.md` is the Owner\u2019s frame for what this corpus must and must not do (closes the recursion). **Ratified and in force** (2026-09-20; short front Owner-ratified 2026-09-24). While a mandate is unratified, no dimension scoring a corpus against its purpose may be `pass` \u2014 that control does not apply here while ratification holds."
+    },
+    {
+      "id": "R85",
+      "section": "12",
+      "disposition": "NONE",
+      "via": "corpus self-description \u2014 the operating instrument's registration, authority rank and revision rule",
+      "text": "**The corpus has an operating instrument, and it is in force.** `EDI-OPERATING-INSTRUMENT.md` (v1.12) is tier 4 in `../AUTHORITY.json`: it **loses to this document** on roles, states, schemas, and the pass rule. Owner ratifies changes; version bumps regenerate derived artifacts in the same pass. It is retained hashed and named in the manifest (`instrument-v1.12`)."
+    },
+    {
+      "id": "R86",
+      "section": "12.1",
+      "disposition": "LINE",
+      "via": "C32",
+      "text": "**NORMATIVE \u2014 entry B is a labelled baseline (C32).** An `entry: B` job is legal only if `reads_before_freeze` names the reads that could reveal a defect and states they came after the rubric was frozen. C3 is not satisfied by the artifact already existing. A live artifact that fails is `rejected` plus an Owner disposition; the machine does not delete it. A fix is a new job. Procedure: Instrument "
+    }
+  ]
+}
