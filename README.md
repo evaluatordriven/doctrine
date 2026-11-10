@@ -15,7 +15,9 @@ record lets anyone who needs to audit the work check it.
 | [`evidence/software-defect-pairs.md`](evidence/software-defect-pairs.md) | The same model, with and without the loop, on real software defects (cited in §8) | Anyone weighing the claims |
 | [`evidence/lingala-reading-2026-09-06.md`](evidence/lingala-reading-2026-09-06.md) | Two Lingala speakers' reading of a loop-built translation (cited in §8) | Anyone weighing the claims |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed in this repository | Everyone |
-| [`LICENSE`](LICENSE) | Creative Commons Attribution 4.0 International | Everyone |
+| [`LICENSE`](LICENSE) | Creative Commons Attribution 4.0 International (text) | Everyone |
+| [`LICENSE-CODE`](LICENSE-CODE) | Apache License 2.0 (code: `contracts/tools/`, `contracts/schemas/`, `contracts/fixtures/`) | Implementations and their testers |
+| [`NOTICE`](NOTICE) | Which licence covers which path, and the patent grant | Everyone |
 
 ## Chain of command
 
@@ -86,12 +88,17 @@ repository at <https://github.com/evaluatordriven/custody>. The doctrine and its
 the record's terms; where they name the same term, custody/v1 governs. The record does not depend on the
 doctrine.
 
-**Status (2026-11-02).** custody/v1 is a candidate (v0.9.7). Its stranger test has not yet passed (v0.9.4 to
+**Status (2026-11-10).** custody/v1 is a candidate (v0.9.8). Its stranger test has not yet passed (v0.9.4 to
 v0.9.7). Known implementations: [Plumbline](https://github.com/evaluatordriven/plumbline) emits custody/v1
 records for its own jobs; two are published, and both verify at CL1.
 
 ## Licence
 
-Text and evidence: [CC BY 4.0](LICENSE). © 2026 Steve Moitozo II. More at <https://evaluatordriven.com>.
-The code in `contracts/tools/` and the schemas and fixtures in `contracts/schemas/` take the licence the
-Owner applies to the evaluatordriven repositories.
+**Text and evidence:** [CC BY 4.0](LICENSE). © 2026 Steve Moitozo II. More at <https://evaluatordriven.com>.
+**Code** — `contracts/tools/`, `contracts/schemas/`, `contracts/fixtures/`: [Apache License 2.0](LICENSE-CODE).
+Apache-2.0 §3 carries an express patent grant for that code; CC BY 4.0 grants none for the text.
+Which path takes which licence is stated once, in [`NOTICE`](NOTICE).
+
+The split is deliberate. An implementation copies a checker into its own tree and needs a software
+licence, not a prose one; a reader quotes the doctrine and needs neither the Apache obligations nor the
+implication that a document is code.
