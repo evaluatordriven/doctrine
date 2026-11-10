@@ -1,0 +1,14 @@
+Evaluator Driven — doctrine and machine contracts
+Copyright 2026 Steve Moitozo II
+
+The code in this repository — `contracts/tools/`, `contracts/schemas/` and
+`contracts/fixtures/` — is licensed under the Apache License, Version 2.0; see
+LICENSE-CODE. Apache-2.0 §3 grants an express patent licence for that code.
+
+The text in this repository — `DOCTRINE.md`, `contracts/*.md`, `README.md`,
+`CHANGELOG.md` and `evidence/` — is licensed under Creative Commons Attribution
+4.0 International; see LICENSE.
+
+The two licences are deliberately separate: a reader must be able to copy a
+checker into an implementation without inheriting the prose licence, and must be
+able to quote the doctrine without inheriting a software licence.

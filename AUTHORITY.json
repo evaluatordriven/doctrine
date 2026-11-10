@@ -98,6 +98,8 @@
     "CHANGELOG.md",
     "AUTHORITY.json",
     "LICENSE",
+    "LICENSE-CODE",
+    "NOTICE",
     ".gitignore",
     "evidence/*",
     "tools/*",

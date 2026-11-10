@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased — 2026-11-10
+
+**States the code licence the README had left to inference, and refreshes the custody status line.**
+No rule, schema or fixture changes; the doctrine is still v0.2.1.
+
+- **`LICENSE-CODE` (Apache-2.0) now covers `contracts/tools/`, `contracts/schemas/` and
+  `contracts/fixtures/`.** The README previously said these "take the licence the Owner applies to the
+  evaluatordriven repositories", which named no licence at all — a reader could not tell whether the
+  checkers were copyable. Apache-2.0 matches custody, whose SPEC already declares `Code: Apache-2.0`, and
+  its §3 carries an express patent grant that CC BY 4.0 does not.
+- **`NOTICE` states which path takes which licence**, in one place, so the README and the files cannot
+  drift apart again.
+- **README §Status:** custody/v1 is now described as v0.9.8, not v0.9.7.
+
 ## 0.2.1 — 2026-11-02, ratified by the Owner
 
 **Fixes a defect in v0.2: the doctrine kept rules the contracts had already replaced, and the chain of
