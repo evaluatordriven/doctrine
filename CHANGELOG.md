@@ -2,6 +2,16 @@
 
 ## Unreleased — 2026-11-10
 
+**Freezes rule growth until one outside job exists.** No rule, schema or fixture changes; the doctrine is
+still v0.2.1.
+
+- **README §Status** now carries the freeze and its reason: 70 rule ids, 86 indexed contract rules and
+  ~69k words against evidence of three defects and two rescues. The next rule buys less than the next
+  outside reader. Clarifications that cannot change a verdict are not rule growth; a change to what a
+  checker enforces is out of scope until the freeze lifts.
+
+## Unreleased — 2026-11-10
+
 **States the code licence the README had left to inference, and refreshes the custody status line.**
 No rule, schema or fixture changes; the doctrine is still v0.2.1.
 
