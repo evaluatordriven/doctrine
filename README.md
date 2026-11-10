@@ -68,9 +68,9 @@ python3 tools/check_authority.py --selftest && python3 tools/check_downhill.py -
 ## Status
 
 **Rule growth is frozen as of 2026-11-10**, by the Owner's decision, until one job has been run with a
-Specialist or a stranger reader who is not the Owner. The reason is arithmetic rather than principle: 70
-doctrine rule ids, 86 indexed contract rules and roughly 69k words of specification and guide prose have
-been written against evidence of three defects, two rescued. The next rule buys less than the next
+Specialist or a stranger reader who is not the Owner. The reason is arithmetic rather than principle: 86
+indexed contract rules, 22 numbered rules in `DOCTRINE.md`, and ~39k words of Markdown in this repository
+have been written against evidence of three defects, two rescued. The next rule buys less than the next
 outside reader does. Nothing already written is withdrawn; no rule may be added, and a change that
 alters what a checker enforces is out of scope until the freeze lifts. Typos, citations and
 clarifications that cannot change a verdict are not rule growth.

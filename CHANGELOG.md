@@ -5,8 +5,12 @@
 **Freezes rule growth until one outside job exists.** No rule, schema or fixture changes; the doctrine is
 still v0.2.1.
 
-- **README §Status** now carries the freeze and its reason: 70 rule ids, 86 indexed contract rules and
-  ~69k words against evidence of three defects and two rescues. The next rule buys less than the next
+- **README §Status** now carries the freeze and its reason: 86 indexed contract rules, 22 numbered rules in
+  `DOCTRINE.md` and ~39k words of Markdown against evidence of three defects and two rescues. *(Corrected
+  the same day: the first draft repeated the reviewer's figures — 70 ids, ~69k words — which are not this
+  repository's numbers. Measured here: `grep -rhoE '\bD[0-9]+\.[0-9]+\b' --include=*.md .` gives 22,
+  `wc -w` over Markdown gives 39,394, and `EDI-RULE-INDEX.json` carries 86 rules. A freeze justified with
+  someone else's arithmetic would have been the same defect it exists to stop.)* The next rule buys less than the next
   outside reader. Clarifications that cannot change a verdict are not rule growth; a change to what a
   checker enforces is out of scope until the freeze lifts.
 
