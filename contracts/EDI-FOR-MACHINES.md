@@ -98,6 +98,20 @@ The schema wins on **field names**. It wins on requiredness only where it is **s
 
 ---
 
+## Finish kinds (do not collapse)
+
+`terminal_state: accepted` means the **loop** finished under the pass rule. It does **not** by itself mean:
+
+- a custody **release record** is checker-OK, or  
+- the version is on `main`, or  
+- a stranger can reproduce the claim.
+
+Name the finish you mean. An **instrument runner** (e.g. a unittest suite) is not a **bar** in the custody sense (author, frozen dimensions, approvals bound to a bar digest). A hollow custody JSON (null bar/maker/instrument/controls) is not a release record — prefer honest absence over a false file.
+
+Instances may label finishes more finely (Plumbline: `instrument_gate` / `custody_gate` / `job_class`); they must not weaken the three terminal states above.
+
+---
+
 ## Success check (machine)
 
 A run is well-formed only if:
