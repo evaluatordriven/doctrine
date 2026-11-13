@@ -108,7 +108,7 @@ The schema wins on **field names**. It wins on requiredness only where it is **s
 
 Name the finish you mean. An **instrument runner** (e.g. a unittest suite) is not a **bar** in the custody sense (author, frozen dimensions, approvals bound to a bar digest). A hollow custody JSON (null bar/maker/instrument/controls) is not a release record — prefer honest absence over a false file.
 
-Instances may label finishes more finely (Plumbline: `instrument_gate` / `custody_gate` / `job_class`); they must not weaken the three terminal states above.
+Instances may label finishes more finely (Plumbline: `instrument_gate` / `custody_gate` as finish labels, and optional `job_class` on the packet); they must not weaken the three terminal states above.
 
 ---
 

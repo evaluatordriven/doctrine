@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — 2026-11-12
+
+**Names the finishes that `terminal_state: accepted` does not include.** No rule, schema or fixture
+changes; the doctrine is still v0.2.1; Contracts remain v1.27.0.
+
+- **`contracts/EDI-FOR-MACHINES.md`** gains a "Finish kinds (do not collapse)" section: an accepted
+  loop is not by itself a custody release record, a ship to `main`, or a stranger-reproducible claim.
+  An instrument runner is not a custody bar; a hollow custody JSON is not a release record. Instances
+  may label finishes more finely, and must not weaken the three terminal states.
+- **`contracts/MANIFEST.sha256`** is regenerated in the same pass so the new bytes of
+  `EDI-FOR-MACHINES.md` are recorded.
+
 ## Unreleased — 2026-11-10
 
 **Freezes rule growth until one outside job exists.** No rule, schema or fixture changes; the doctrine is
